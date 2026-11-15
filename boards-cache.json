@@ -1,1 +1,5566 @@
-{}
+{
+ "Martinrea International": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:14:18.839Z"
+ },
+ "ApplyBoard": {
+  "status": "found",
+  "url": "https://applyboard.wd3.myworkdayjobs.com/ApplyBoardNH",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:14:23.485Z"
+ },
+ "Dialogue Health": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:15:01.655Z"
+ },
+ "Meridian Credit Union": {
+  "status": "check_page",
+  "url": "https://www.meridiancu.ca/about-meridian/careers-at-meridian",
+  "site": "https://www.meridiancu.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:15:02.416Z"
+ },
+ "Agnico Eagle Mines": {
+  "status": "found",
+  "url": "https://www.agnicoeagle.com/English/careers/overview/default.aspx",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:15:05.640Z"
+ },
+ "Zymeworks": {
+  "status": "found",
+  "url": "https://ats.rippling.com/en-CA/zymeworks-careers/jobs",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:15:05.834Z"
+ },
+ "Université Laval": {
+  "status": "check_page",
+  "url": "https://www.rh.ulaval.ca/",
+  "site": "https://www.ulaval.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:15:09.163Z"
+ },
+ "MTY Food Group": {
+  "status": "check_page",
+  "url": "https://mtygroup.com/en/careers/",
+  "site": "http://www.mtygroup.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:15:09.889Z"
+ },
+ "Quebecor (Videotron)": {
+  "status": "found",
+  "url": "https://careers.smartrecruiters.com/Videotron",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:15:12.636Z"
+ },
+ "Qikiqtaaluk Corporation": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:16:02.933Z"
+ },
+ "Holland College": {
+  "status": "found",
+  "url": "https://hollandcollege.com/student-experience/campus-life/student-jobs/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:16:03.734Z"
+ },
+ "UNI Financial Cooperation": {
+  "status": "check_page",
+  "url": "https://www.uni.ca/fr/carrieres/",
+  "site": "https://www.uni.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:16:08.105Z"
+ },
+ "Coast Capital Savings": {
+  "status": "found",
+  "url": "https://careers.coastcapitalsavings.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:17:13.215Z"
+ },
+ "Bank of China (Canada)": {
+  "status": "check_page",
+  "url": "https://www.boc.cn/custserv/cs1/msg/200909/t20090928_846317.html",
+  "site": "https://www.boc.cn",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:17:18.470Z"
+ },
+ "Federated Co-operatives": {
+  "status": "found",
+  "url": "https://fa-esfc-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:17:21.312Z"
+ },
+ "Manulife Bank": {
+  "status": "found",
+  "url": "https://manulife.wd3.myworkdayjobs.com/en-US/MFCJH_Jobs",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:17:39.927Z"
+ },
+ "CAAT Pension Plan": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:04.565Z"
+ },
+ "National Bank Financial": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:04.765Z"
+ },
+ "Purpose Investments": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:04.906Z"
+ },
+ "Farm Credit Canada": {
+  "status": "found",
+  "url": "https://fccfac.wd3.myworkdayjobs.com/en-US/careers-carrieres",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:18:06.649Z"
+ },
+ "Invesco Canada": {
+  "status": "found",
+  "url": "https://invesco.wd1.myworkdayjobs.com/IVZ",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:18:09.810Z"
+ },
+ "Walmart Canada": {
+  "status": "found",
+  "url": "https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:18:50.376Z"
+ },
+ "Cargill Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.cargill.ca/en/index.jsp",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:19:07.802Z"
+ },
+ "Mondelēz Canada": {
+  "status": "found",
+  "url": "https://www.mondelezinternational.com/careers/jobs/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:19:11.889Z"
+ },
+ "Foresters Financial": {
+  "status": "found",
+  "url": "https://foresters.wd3.myworkdayjobs.com/ForestersFinancialCareers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:19:12.596Z"
+ },
+ "Travelers Canada": {
+  "status": "found",
+  "url": "https://careers-ovg.icims.com",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:19:15.640Z"
+ },
+ "Inovia Capital": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:20:05.803Z"
+ },
+ "Maple Leaf Sports & Entertainment (MLSE)": {
+  "status": "found",
+  "url": "https://mlse.wd3.myworkdayjobs.com/MLSE",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:20:12.999Z"
+ },
+ "Diageo Canada": {
+  "status": "found",
+  "url": "https://diageo.wd3.myworkdayjobs.com/en-US/Diageo_Careers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:20:18.933Z"
+ },
+ "Payments Canada": {
+  "status": "check_page",
+  "url": "https://www.paiements.ca/points-de-contact/paiements-canada-carrieres",
+  "site": "https://www.paiements.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:21:09.724Z"
+ },
+ "Westinghouse Electric Canada": {
+  "status": "found",
+  "url": "https://careers.westinghousenuclear.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:21:11.985Z"
+ },
+ "Purdys Chocolatier": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.purdys.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:21:21.902Z"
+ },
+ "Chatham-Kent Health Alliance": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:22:07.011Z"
+ },
+ "City of Kamloops": {
+  "status": "check_page",
+  "url": "https://kamloops.ca/careers",
+  "site": "https://kamloops.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:22:09.672Z"
+ },
+ "District School Board of Niagara": {
+  "status": "check_page",
+  "url": "https://careers.dsbn.org/",
+  "site": "https://www.dsbn.org/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:22:11.234Z"
+ },
+ "Winnipeg Police Service": {
+  "status": "check_page",
+  "url": "https://www.winnipeg.ca/careers",
+  "site": "http://www.winnipeg.ca/police",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:22:11.766Z"
+ },
+ "WCB Alberta": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:07.735Z"
+ },
+ "City of Clarington": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:07.810Z"
+ },
+ "Kal Tire": {
+  "status": "found",
+  "url": "https://jobs.jobvite.com/kaltire/jobs",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:23:12.082Z"
+ },
+ "Barry Callebaut Canada": {
+  "status": "found",
+  "url": "https://jobs.barry-callebaut.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:23:55.665Z"
+ },
+ "BC Housing": {
+  "status": "found",
+  "url": "https://www.bchousing.org/careers",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:24:00.702Z"
+ },
+ "Ontario Health atHome": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:00.826Z"
+ },
+ "City of Prince Albert": {
+  "status": "check_page",
+  "url": "https://www.citypa.ca/city-hall/jobs/",
+  "site": "https://www.earc.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:24:01.707Z"
+ },
+ "City of Kelowna": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://kelowna.ca",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:24:48.135Z"
+ },
+ "City of Fredericton": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:25:00.268Z"
+ },
+ "Kreston GTA": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:25:00.647Z"
+ },
+ "Cognizant Canada": {
+  "status": "check_page",
+  "url": "https://careers.cognizant.com/global-en/",
+  "site": "https://www.cognizant.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:25:00.694Z"
+ },
+ "CIRA": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:26:01.596Z"
+ },
+ "Dartmouth General Hospital": {
+  "status": "found",
+  "url": "https://jobs.nshealth.ca/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:26:03.620Z"
+ },
+ "Halton Healthcare": {
+  "status": "found",
+  "url": "https://careers.smartrecruiters.com/HaltonHealthcare1",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:26:05.420Z"
+ },
+ "Kelly Services Canada": {
+  "status": "found",
+  "url": "https://kellyservices.wd503.myworkdayjobs.com/corporatecareers-kellyservices-com",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:26:06.414Z"
+ },
+ "EXL Canada": {
+  "status": "found",
+  "url": "https://fa-ewjt-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:26:30.664Z"
+ },
+ "Softchoice": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:01.877Z"
+ },
+ "Aird & Berlis": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:01.974Z"
+ },
+ "Paymentus Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:02.166Z"
+ },
+ "Fraser Institute": {
+  "status": "check_page",
+  "url": "https://www.fraserinstitute.org/careers",
+  "site": "https://www.fraserinstitute.org/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:27:02.323Z"
+ },
+ "McCarthy Tétrault": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://mccarthy.ca",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:27:04.369Z"
+ },
+ "Orla Mining": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:02.699Z"
+ },
+ "Primaris REIT": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.primarisreit.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:28:03.115Z"
+ },
+ "CCL Industries": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://cclind.com",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:28:03.701Z"
+ },
+ "Ivanhoe Mines": {
+  "status": "found",
+  "url": "https://ivanhoemines.simplify.hr/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:28:14.406Z"
+ },
+ "Gildan Activewear": {
+  "status": "check_page",
+  "url": "https://gildancorp.com/en/careers/open-positions/",
+  "site": "http://www.gildan.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:28:51.759Z"
+ },
+ "Aecon Group": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:02.964Z"
+ },
+ "Health Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.hc-sc.gc.ca",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:29:04.000Z"
+ },
+ "FIS Canada": {
+  "status": "check_page",
+  "url": "https://www.fis-ski.com/inside-fis/about-fis/career",
+  "site": "http://www.fis-ski.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:29:51.527Z"
+ },
+ "PSB Boisjoli": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:30:03.475Z"
+ },
+ "Intellum": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:30:03.738Z"
+ },
+ "Canadian Air Transport Security Authority (CATSA)": {
+  "status": "found",
+  "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/jobSearch?act=redirectCwsV2&cws=46&org=CATSA",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:30:07.754Z"
+ },
+ "Cox": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.cox.es/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:30:12.007Z"
+ },
+ "Capilano University": {
+  "status": "found",
+  "url": "https://www.capilanou.ca/admissions/apply-to-capu/apply-now/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:31:04.899Z"
+ },
+ "Université Sainte-Anne": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.usainteanne.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:31:04.909Z"
+ },
+ "University of Windsor": {
+  "status": "check_page",
+  "url": "https://www.uwindsor.ca/careercentre/",
+  "site": "https://www.uwindsor.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:31:05.501Z"
+ },
+ "Michelin Canada": {
+  "status": "check_page",
+  "url": "https://www.michelin.com/en/expertise/talents",
+  "site": "https://www.michelin.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:31:11.023Z"
+ },
+ "Topaz Energy": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:32:04.949Z"
+ },
+ "Seneca Polytechnic": {
+  "status": "found",
+  "url": "https://tre.tbe.taleo.net/tre01/ats/careers/v2/jobSearch?act=redirectCwsV2&cws=42&org=SENECOLL4",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:32:05.458Z"
+ },
+ "Tyk": {
+  "status": "check_page",
+  "url": "http://www.tyk.fi/careers",
+  "site": "http://www.tyk.fi/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:32:08.462Z"
+ },
+ "National Capital Commission": {
+  "status": "found",
+  "url": "https://tre.tbe.taleo.net/tre01/ats/careers/v2/jobSearch?org=DNQV4N&cws=37",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:32:09.101Z"
+ },
+ "Vidyard": {
+  "status": "check_page",
+  "url": "https://www.vidyard.com/careers/",
+  "site": "http://www.vidyard.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:14:05.016Z"
+ },
+ "Xanadu": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:14:06.303Z"
+ },
+ "Linamar": {
+  "status": "found",
+  "url": "https://fa-epmd-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_3001",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:14:13.159Z"
+ },
+ "Aviva Canada": {
+  "status": "check_page",
+  "url": "https://www.aviva.com/careers/",
+  "site": "https://aviva.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:14:33.702Z"
+ },
+ "Vancity": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.vancity.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:15:03.781Z"
+ },
+ "Government of Alberta": {
+  "status": "check_page",
+  "url": "https://www.alberta.ca/find-a-job",
+  "site": "https://www.alberta.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:15:04.437Z"
+ },
+ "Ballard Power Systems": {
+  "status": "found",
+  "url": "https://www.ballard.com/careers/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:15:09.220Z"
+ },
+ "ATB Financial": {
+  "status": "found",
+  "url": "https://careers.atb.com/careers?start=0&location=San+Antonio%2C+Texas%2C+US&pid=1125899907737458&sort_by=distance&filter_distance=80&filter_include_remote=1&filter_include_relocation=0",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:15:11.075Z"
+ },
+ "Government of the Northwest Territories": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:16:01.818Z"
+ },
+ "Newfoundland and Labrador Hydro": {
+  "status": "found",
+  "url": "https://nlhydro.com/work-with-us/current-opportunities/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:16:04.885Z"
+ },
+ "Empire Company (Sobeys)": {
+  "status": "check_page",
+  "url": "https://jobs.sobeyscareers.com/",
+  "site": "http://www.empireco.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:16:05.445Z"
+ },
+ "University of Prince Edward Island": {
+  "status": "found",
+  "url": "https://www.upei.ca/exed/students/employment-opportunities",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:16:08.416Z"
+ },
+ "Université de Montréal": {
+  "status": "check_page",
+  "url": "https://www.umontreal.ca/carrieres/",
+  "site": "https://www.umontreal.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:17:03.852Z"
+ },
+ "SaskEnergy": {
+  "status": "found",
+  "url": "https://saskenergy.wd10.myworkdayjobs.com/SaskEnergy",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:17:04.206Z"
+ },
+ "Arctic Co-operatives": {
+  "status": "found",
+  "url": "https://careers.chooseyourcoop.com/job-openings-in-nwt/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:17:08.218Z"
+ },
+ "FirstOntario Credit Union": {
+  "status": "check_page",
+  "url": "https://joinus.firstontario.com/onboarding/servletcontroller",
+  "site": "https://www.firstontario.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:17:10.145Z"
+ },
+ "Ninepoint Partners": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:03.417Z"
+ },
+ "Peters & Co.": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:03.934Z"
+ },
+ "Empire Life": {
+  "status": "check_page",
+  "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1813b5f5-505e-4c90-9c6f-49f292293ac6&ccId=19000101_000001&lang=fr_CA",
+  "site": "http://www.empire.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:18:08.729Z"
+ },
+ "Franklin Templeton Canada": {
+  "status": "found",
+  "url": "https://franklintempleton.wd5.myworkdayjobs.com/Primary-External-1",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:18:12.908Z"
+ },
+ "Chemtrade Logistics": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:19:04.823Z"
+ },
+ "Novo Nordisk Canada": {
+  "status": "check_page",
+  "url": "https://login.microsoftonline.com/fdfed7bd-9f6a-44a1-b694-6e39c468c150/saml2",
+  "site": "https://www.novonordisk.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:19:11.489Z"
+ },
+ "Lassonde Industries": {
+  "status": "check_page",
+  "url": "https://www.lassonde.com/fr/emplois/",
+  "site": "https://www.lassonde.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:19:15.234Z"
+ },
+ "Colgate-Palmolive Canada": {
+  "status": "found",
+  "url": "https://jobs.colgate.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:19:27.894Z"
+ },
+ "RONA": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:20:05.788Z"
+ },
+ "SSENSE": {
+  "status": "found",
+  "url": "https://careers.ssense.com/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:20:07.010Z"
+ },
+ "Cineplex": {
+  "status": "found",
+  "url": "https://cineplex.wd3.myworkdayjobs.com/Cineplex",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:20:30.183Z"
+ },
+ "Deutsche Bank Canada": {
+  "status": "check_page",
+  "url": "https://careers.db.com/index?kid=careers.redirect-en.shortcut&language_id=1",
+  "site": "https://www.db.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:21:10.035Z"
+ },
+ "Alectra Utilities": {
+  "status": "check_page",
+  "url": "https://www.alectra.com/careers",
+  "site": "http://www.alectrautilities.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:21:13.508Z"
+ },
+ "Sun-Rype Products": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:22:07.716Z"
+ },
+ "Quinte Health": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:22:07.825Z"
+ },
+ "Bridgewater Bank": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:22:08.037Z"
+ },
+ "Husky Technologies": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:22:08.154Z"
+ },
+ "Service de police de la Ville de Montréal (SPVM)": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://spvm.qc.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:22:09.202Z"
+ },
+ "Knight Therapeutics": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://gud-knight.com/en",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:22:17.833Z"
+ },
+ "Town of Niagara-on-the-Lake": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:00.809Z"
+ },
+ "County of Simcoe": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:00.819Z"
+ },
+ "City of Nanaimo": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:00.886Z"
+ },
+ "Alberta Utilities Commission": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:00.949Z"
+ },
+ "St. Thomas Elgin General Hospital": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:01.119Z"
+ },
+ "Ontario College of Teachers": {
+  "status": "check_page",
+  "url": "https://www.oct.ca/en-ca/about-the-college/working-at-the-college",
+  "site": "https://oct.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:23:06.305Z"
+ },
+ "Town of Ajax": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:01.856Z"
+ },
+ "City of Burlington": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:01.925Z"
+ },
+ "City of Coquitlam": {
+  "status": "check_page",
+  "url": "https://www.coquitlam.ca/414/Career-Opportunities",
+  "site": "https://www.coquitlam.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:24:03.356Z"
+ },
+ "City of Montreal": {
+  "status": "check_page",
+  "url": "https://montreal.ca/articles/offres-demploi-2944",
+  "site": "http://ville.montreal.qc.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:24:07.059Z"
+ },
+ "CNESST": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.cnesst.gouv.qc.ca",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:24:50.021Z"
+ },
+ "United Way Greater Toronto": {
+  "status": "check_page",
+  "url": "https://www.unitedwaygt.org/about-us/join-our-team/",
+  "site": "https://www.unitedwaygt.org/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:25:06.410Z"
+ },
+ "Kingston Health Sciences Centre": {
+  "status": "check_page",
+  "url": "https://kingstonhsc.ca/careers",
+  "site": "https://kingstonhsc.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:25:08.597Z"
+ },
+ "Avanade Canada": {
+  "status": "check_page",
+  "url": "https://www.avanade.com/en-ca/career",
+  "site": "http://www.avanade.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:25:09.160Z"
+ },
+ "Canada Foundation for Innovation": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.innovation.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:25:50.056Z"
+ },
+ "WCB Nova Scotia": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:26:03.980Z"
+ },
+ "Cassels": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:26:04.375Z"
+ },
+ "WorkSafeBC": {
+  "status": "found",
+  "url": "https://www.worksafebc.com/en/about-us/careers",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:26:05.983Z"
+ },
+ "Torys": {
+  "status": "found",
+  "url": "https://careers-torys.icims.com",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:26:06.185Z"
+ },
+ "Oxford Properties": {
+  "status": "found",
+  "url": "https://omers.wd3.myworkdayjobs.com/OMERS_External",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:26:56.971Z"
+ },
+ "Smythe LLP": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:05.380Z"
+ },
+ "Capgemini Canada": {
+  "status": "check_page",
+  "url": "https://www.capgemini.com/careers/",
+  "site": "https://www.capgemini.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:27:07.367Z"
+ },
+ "Athabasca Oil": {
+  "status": "check_page",
+  "url": "https://www.atha.com/careers.html",
+  "site": "http://www.atha.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:27:07.476Z"
+ },
+ "Expedia Group (Montreal)": {
+  "status": "found",
+  "url": "https://expedia.wd108.myworkdayjobs.com/en-US/search",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:27:08.040Z"
+ },
+ "C.D. Howe Institute": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:06.087Z"
+ },
+ "Ero Copper": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:06.310Z"
+ },
+ "Gibson Energy": {
+  "status": "found",
+  "url": "https://careers.gibsonenergy.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:28:08.586Z"
+ },
+ "Tridel": {
+  "status": "check_page",
+  "url": "https://www.tridel.com/about-tridel/career-opportunities/",
+  "site": "https://www.tridel.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:28:14.920Z"
+ },
+ "Hudson River Trading Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.hudson-trading.com",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:28:53.904Z"
+ },
+ "SmartCentres REIT": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:07.329Z"
+ },
+ "Topicus.com": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:07.512Z"
+ },
+ "Wealthica": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:07.623Z"
+ },
+ "CSL Group": {
+  "status": "found",
+  "url": "https://careers-cslships.icims.com",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:29:09.923Z"
+ },
+ "HDR Canada": {
+  "status": "check_page",
+  "url": "https://www.hdrinc.com/careers",
+  "site": "https://www.hdrinc.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:29:11.698Z"
+ },
+ "LaterPay": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:30:00.272Z"
+ },
+ "Mayven Studios": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:30:00.341Z"
+ },
+ "Bowhead": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:30:00.704Z"
+ },
+ "InterRent REIT": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:30:00.871Z"
+ },
+ "Unilever Canada": {
+  "status": "found",
+  "url": "https://unilever.wd3.myworkdayjobs.com/Unilever_Experienced_Professionals",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:30:16.283Z"
+ },
+ "Gruntwork": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:31:01.960Z"
+ },
+ "Bow Valley College": {
+  "status": "found",
+  "url": "https://bowvalleycollege.wd10.myworkdayjobs.com/BowValleyCollege",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:31:04.264Z"
+ },
+ "Algonquin College": {
+  "status": "found",
+  "url": "https://algonquincollege.wd3.myworkdayjobs.com/CareerOpportunities",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:31:05.235Z"
+ },
+ "BCIT (British Columbia Institute of Technology)": {
+  "status": "check_page",
+  "url": "https://www.bcit.ca/about/careers/",
+  "site": "https://www.bcit.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:31:05.957Z"
+ },
+ "TMX Group": {
+  "status": "found",
+  "url": "https://tmx.wd3.myworkdayjobs.com/en-US/TMX_Careers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:31:10.444Z"
+ },
+ "Sault College": {
+  "status": "found",
+  "url": "https://www.saultcollege.ca/employment-services",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:32:03.498Z"
+ },
+ "St. Francis Xavier University": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.stfx.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:32:04.960Z"
+ },
+ "George Brown College": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.georgebrown.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:32:05.781Z"
+ },
+ "Canada Lands Company": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.clcl.ca",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:32:50.175Z"
+ },
+ "Questrade": {
+  "status": "found",
+  "url": "https://job-boards.greenhouse.io/questrade",
+  "via": "job board found from the company name",
+  "checked": "2026-11-15T20:13:47.076Z"
+ },
+ "Ford Motor Company of Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.ford.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:13:51.257Z"
+ },
+ "Axonify": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:13:51.343Z"
+ },
+ "ecobee": {
+  "status": "found",
+  "url": "https://careers.generac.com/en/jobs/?orderby=0&pagesize=20&page=1&radius=100&brand=ecobee",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:13:52.671Z"
+ },
+ "Kinross Gold": {
+  "status": "found",
+  "url": "https://jobs.kinross.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:13:52.861Z"
+ },
+ "Costco Canada": {
+  "status": "check_page",
+  "url": "https://www.costco.com/f/-/careers",
+  "site": "https://www.costco.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:14:01.010Z"
+ },
+ "Stingray Group": {
+  "status": "found",
+  "url": "https://jobs.stingray.com/career-opportunities/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:14:06.790Z"
+ },
+ "Pratt & Whitney Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.pwc.ca/en/home",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:14:51.579Z"
+ },
+ "Cogeco": {
+  "status": "found",
+  "url": "https://cogeco.wd3.myworkdayjobs.com/en-US/Cogeco_Careers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:14:58.890Z"
+ },
+ "Introhive": {
+  "status": "check_page",
+  "url": "https://www.introhive.com/careers/",
+  "site": "https://www.introhive.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:15:02.313Z"
+ },
+ "Nova Scotia Power": {
+  "status": "found",
+  "url": "https://careers-emera.icims.com",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:15:02.930Z"
+ },
+ "Marine Atlantic": {
+  "status": "found",
+  "url": "https://careers-carrieres.ma.ca/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:15:03.090Z"
+ },
+ "University of Manitoba": {
+  "status": "check_page",
+  "url": "https://umanitoba.ca/careers/",
+  "site": "https://umanitoba.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:15:07.521Z"
+ },
+ "Canadian Natural Resources": {
+  "status": "found",
+  "url": "https://ehaa.fa.ca2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CNRL-Professional",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:15:09.186Z"
+ },
+ "ICBC": {
+  "status": "found",
+  "url": "https://careers.icbc.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:15:23.201Z"
+ },
+ "ivari": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:16:00.780Z"
+ },
+ "Sourcegraph": {
+  "status": "found",
+  "url": "https://job-boards.greenhouse.io/sourcegraph91",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:16:02.253Z"
+ },
+ "Access Credit Union": {
+  "status": "found",
+  "url": "https://accesscu.wd3.myworkdayjobs.com/Access_Careers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:16:07.977Z"
+ },
+ "ICICI Bank Canada": {
+  "status": "found",
+  "url": "https://www.icicibank.ca/careers",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:16:08.687Z"
+ },
+ "Kindred Credit Union": {
+  "status": "check_page",
+  "url": "https://www.kindredcu.com/careers",
+  "site": "https://www.kindredcu.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:16:09.630Z"
+ },
+ "AGF Management": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:02.816Z"
+ },
+ "University Pension Plan Ontario": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:03.166Z"
+ },
+ "Blueshore Financial": {
+  "status": "found",
+  "url": "https://www.capilanou.ca/admissions/apply-to-capu/apply-now/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:17:03.710Z"
+ },
+ "Northbridge Financial": {
+  "status": "found",
+  "url": "https://northbridgefinancial.wd3.myworkdayjobs.com/NBFC",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:17:16.254Z"
+ },
+ "Rexall Pharmacy Group": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:03.868Z"
+ },
+ "Interfor": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:04.154Z"
+ },
+ "Corby Spirit and Wine": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:04.202Z"
+ },
+ "Danone Canada": {
+  "status": "check_page",
+  "url": "https://www.danone.com/fr/carrieres.html",
+  "site": "https://www.danone.com/fr.html",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:18:13.060Z"
+ },
+ "Swiss Re Canada": {
+  "status": "found",
+  "url": "https://www.swissre.com/careers/jobSearch.html",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:18:38.425Z"
+ },
+ "Halifax Port Authority": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:19:04.978Z"
+ },
+ "Walker Industries": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:19:05.213Z"
+ },
+ "Enova Power": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:19:05.421Z"
+ },
+ "ConocoPhillips Canada": {
+  "status": "found",
+  "url": "https://conocophillips.wd1.myworkdayjobs.com/External",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:19:07.768Z"
+ },
+ "Davie Shipbuilding": {
+  "status": "found",
+  "url": "https://fa-ewde-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/fr-CA/sites/CX_1",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:19:16.019Z"
+ },
+ "Global X Investments Canada": {
+  "status": "check_page",
+  "url": "https://www.globalx.ca/careers",
+  "site": "https://globalx.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:20:07.538Z"
+ },
+ "Whirlpool Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://whirlpool.co.jp/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:20:09.606Z"
+ },
+ "Canadian Tire Financial Services": {
+  "status": "found",
+  "url": "https://canadiantirecorporation.wd3.myworkdayjobs.com/en-US/Enterprise_External_Careers_Site",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:20:18.975Z"
+ },
+ "Cornwall Community Hospital": {
+  "status": "check_page",
+  "url": "https://www.cornwallhospital.ca/joinourteam",
+  "site": "https://www.cornwallhospital.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:20:19.197Z"
+ },
+ "City of Moose Jaw": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:21:07.319Z"
+ },
+ "Niagara Catholic District School Board": {
+  "status": "found",
+  "url": "https://www.niagaracatholic.ca/careers/teachers",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:21:09.990Z"
+ },
+ "City of North Vancouver": {
+  "status": "check_page",
+  "url": "https://www.cnv.org/City-Hall/Careers",
+  "site": "https://cnv.org/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:21:13.436Z"
+ },
+ "Association of Municipalities of Ontario": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.amo.on.ca",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:21:54.653Z"
+ },
+ "SaskGaming": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:22:00.243Z"
+ },
+ "TransLink": {
+  "status": "found",
+  "url": "https://www.translink.ca/about-us/careers/skytrain-career-opportunities",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:22:01.701Z"
+ },
+ "Société de transport de Montréal (STM)": {
+  "status": "check_page",
+  "url": "https://www.stm.info/carrieres",
+  "site": "https://www.stm.info",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:22:04.001Z"
+ },
+ "Loto-Québec": {
+  "status": "check_page",
+  "url": "https://carrieres.lotoquebec.com/accueil/",
+  "site": "http://www.loto-quebec.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:22:05.176Z"
+ },
+ "Ville de Laval": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:01.759Z"
+ },
+ "City of Victoria": {
+  "status": "check_page",
+  "url": "https://opendata.victoria.ca/careers",
+  "site": "http://opendata.victoria.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:23:09.996Z"
+ },
+ "City of Thunder Bay": {
+  "status": "found",
+  "url": "https://careers.thunderbay.ca/careers-home/jobs",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:23:19.690Z"
+ },
+ "North York General Hospital": {
+  "status": "check_page",
+  "url": "https://www.nygh.on.ca/careers-and-volunteers/career-opportunities/",
+  "site": "http://www.nygh.on.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:23:19.899Z"
+ },
+ "Niagara Region": {
+  "status": "check_page",
+  "url": "https://www.niagararegion.ca/government-and-council/careers-and-volunteering/",
+  "site": "http://www.niagararegion.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:23:25.192Z"
+ },
+ "Tiger Analytics Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:03.316Z"
+ },
+ "Infosys Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.infosys.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:24:06.165Z"
+ },
+ "Health Sciences Centre Winnipeg (Shared Health)": {
+  "status": "found",
+  "url": "https://careers.wrha.mb.ca/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:24:08.444Z"
+ },
+ "Queensway Carleton Hospital": {
+  "status": "check_page",
+  "url": "https://www.qch.on.ca/Careers",
+  "site": "https://www.qch.on.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:24:12.264Z"
+ },
+ "Enghouse Systems": {
+  "status": "found",
+  "url": "https://enghouse.bamboohr.com/jobs",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:25:06.638Z"
+ },
+ "Miller Thomson": {
+  "status": "check_page",
+  "url": "https://www.millerthomson.com/en/careers/",
+  "site": "http://www.millerthomson.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:25:08.165Z"
+ },
+ "TEKsystems Canada": {
+  "status": "found",
+  "url": "https://www.teksystems.com/en/careers",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:25:08.306Z"
+ },
+ "The Daniels Corporation": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:26:05.527Z"
+ },
+ "Avino Silver & Gold Mines": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:26:05.663Z"
+ },
+ "Bloomberg Canada": {
+  "status": "found",
+  "url": "https://bloomberg.avature.net/careers/SearchJobs",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:26:15.896Z"
+ },
+ "Ryan ULC (Canada)": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.canada.ca",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:26:56.179Z"
+ },
+ "Ivanhoé Cambridge": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:06.604Z"
+ },
+ "MDA Space": {
+  "status": "check_page",
+  "url": "https://mda.space/careers",
+  "site": "https://mda.space/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:27:07.630Z"
+ },
+ "goeasy": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.goeasy.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:27:09.096Z"
+ },
+ "Fiserv Canada": {
+  "status": "found",
+  "url": "https://fiserv.wd5.myworkdayjobs.com/EXT",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:27:31.071Z"
+ },
+ "RB Global (Ritchie Bros.)": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:07.695Z"
+ },
+ "Torex Gold Resources": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:07.752Z"
+ },
+ "Martello Technologies": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:07.847Z"
+ },
+ "Wheaton Precious Metals": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.wheatonpm.com/Home/default.aspx",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:28:10.540Z"
+ },
+ "Centerra Gold": {
+  "status": "found",
+  "url": "https://centerragold.scouterecruit.net/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:28:11.446Z"
+ },
+ "Cofense": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:00.705Z"
+ },
+ "Sprott": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:00.738Z"
+ },
+ "Sandhills Development": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:00.795Z"
+ },
+ "Redbrick": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:01.087Z"
+ },
+ "University of King's College": {
+  "status": "found",
+  "url": "https://ukings.ca/campus-community/employment/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:30:04.336Z"
+ },
+ "Hitachi Rail Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://sts.hitachirail.com",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:30:05.330Z"
+ },
+ "College of New Caledonia": {
+  "status": "check_page",
+  "url": "https://cnc.bc.ca/jobs",
+  "site": "https://cnc.bc.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:30:07.202Z"
+ },
+ "Lakeland College": {
+  "status": "check_page",
+  "url": "https://www.lakelandcollege.ca/about/working-at-lakeland/careers.html",
+  "site": "http://www.lakelandcollege.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:30:09.302Z"
+ },
+ "Legrand North America": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:31:03.129Z"
+ },
+ "Humber Polytechnic": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.humber.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:31:03.694Z"
+ },
+ "Wilfrid Laurier University": {
+  "status": "check_page",
+  "url": "https://www.wlu.ca/about/working-at-laurier/index.html",
+  "site": "http://www.wlu.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:31:03.784Z"
+ },
+ "Canadore College": {
+  "status": "check_page",
+  "url": "https://www.canadorecollege.ca/careers",
+  "site": "https://www.canadorecollege.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:31:05.934Z"
+ },
+ "Borrowell": {
+  "status": "found",
+  "url": "https://apply.workable.com/borrowell",
+  "via": "job board found from the company name",
+  "checked": "2026-11-15T20:13:55.810Z"
+ },
+ "Dejero": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:13:58.592Z"
+ },
+ "Hudbay Minerals": {
+  "status": "check_page",
+  "url": "https://hudbayminerals.com/careers/default.aspx",
+  "site": "http://www.hudbayminerals.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:13:59.706Z"
+ },
+ "Alithya": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:14:01.573Z"
+ },
+ "Arc'teryx": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:14:03.223Z"
+ },
+ "Mila - Quebec AI Institute": {
+  "status": "found",
+  "url": "https://apply.workable.com/mila-2",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:14:04.142Z"
+ },
+ "Héroux-Devtek": {
+  "status": "check_page",
+  "url": "https://www.herouxdevtek.com/en/careers",
+  "site": "http://www.herouxdevtek.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:14:05.199Z"
+ },
+ "National Bank of Canada": {
+  "status": "found",
+  "url": "https://emplois.bnc.ca/en_CA/careers/searchjobs",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:14:12.635Z"
+ },
+ "Clearpath Robotics": {
+  "status": "found",
+  "url": "https://rockwellautomation.wd1.myworkdayjobs.com/en-US/External_Rockwell_Automation",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:14:24.711Z"
+ },
+ "Symend": {
+  "status": "check_page",
+  "url": "https://www.symend.com/company/careers",
+  "site": "https://www.symend.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:15:08.190Z"
+ },
+ "Saint Mary's University": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.smu.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:15:08.773Z"
+ },
+ "Memorial University of Newfoundland": {
+  "status": "found",
+  "url": "https://www.mun.ca/hr/careers/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:15:09.147Z"
+ },
+ "Shared Health Manitoba": {
+  "status": "found",
+  "url": "https://careers.wrha.mb.ca/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:15:16.931Z"
+ },
+ "Peoples Group": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:16:01.686Z"
+ },
+ "Desjardins Ontario Credit Union": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:16:01.807Z"
+ },
+ "Your Neighbourhood Credit Union": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:16:01.884Z"
+ },
+ "Wikimedia Foundation": {
+  "status": "check_page",
+  "url": "https://wikimediafoundation.org/jobs/",
+  "site": "https://wikimediafoundation.org/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:16:02.885Z"
+ },
+ "Affinity Credit Union": {
+  "status": "found",
+  "url": "https://jobs.dayforcehcm.com/affinity/CANDIDATEPORTAL",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:16:23.193Z"
+ },
+ "Fortinet": {
+  "status": "found",
+  "url": "https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:16:28.319Z"
+ },
+ "Northleaf Capital Partners": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:04.087Z"
+ },
+ "Birch Hill Equity Partners": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:04.278Z"
+ },
+ "Super.com": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:04.571Z"
+ },
+ "Fiera Capital": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:04.941Z"
+ },
+ "Northern Trust Canada": {
+  "status": "found",
+  "url": "https://ntrs.wd1.myworkdayjobs.com/northerntrust",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:17:28.358Z"
+ },
+ "BMO Insurance": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:06.312Z"
+ },
+ "Moderna Canada": {
+  "status": "found",
+  "url": "https://modernatx.wd1.myworkdayjobs.com/M_tx",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:18:26.270Z"
+ },
+ "Merck Canada": {
+  "status": "found",
+  "url": "https://careers.emdgroup.com/us/en/home",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:18:53.832Z"
+ },
+ "Lockton Canada": {
+  "status": "found",
+  "url": "https://careers.lockton.com/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:18:54.888Z"
+ },
+ "Jean Coutu Group": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.jeancoutu.com",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:19:01.999Z"
+ },
+ "BC Ferries": {
+  "status": "found",
+  "url": "https://bcferries-iacdzv.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:19:03.628Z"
+ },
+ "Familiprix": {
+  "status": "found",
+  "url": "https://www.familiprix.com/en/jobs/search",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:19:11.695Z"
+ },
+ "Jazz Aviation (Chorus Aviation)": {
+  "status": "check_page",
+  "url": "https://flyjazz.com/en/careers/",
+  "site": "http://www.flyjazz.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:19:13.493Z"
+ },
+ "Ovintiv": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:20:02.895Z"
+ },
+ "ISL Engineering": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:20:03.144Z"
+ },
+ "Volkswagen Group Canada": {
+  "status": "check_page",
+  "url": "https://www.volkswagen-group.com/en/career-16057",
+  "site": "https://www.volkswagenag.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:20:16.263Z"
+ },
+ "Halifax Transit": {
+  "status": "check_page",
+  "url": "https://www.halifax.ca/about-halifax/employment",
+  "site": "http://www.halifax.ca/transit/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:21:07.074Z"
+ },
+ "Niagara Peninsula Conservation Authority": {
+  "status": "check_page",
+  "url": "https://npca.ca/about/careers",
+  "site": "https://npca.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:21:08.445Z"
+ },
+ "Disney Canada": {
+  "status": "check_page",
+  "url": "https://join.disneycareers.com/global/en/home",
+  "site": "https://thewaltdisneycompany.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:21:19.143Z"
+ },
+ "London Hydro": {
+  "status": "found",
+  "url": "https://careers.londonhydro.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:21:59.319Z"
+ },
+ "CPA Ontario": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:22:07.363Z"
+ },
+ "Alberta Precision Laboratories": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.albertaprecisionlabs.ca",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:22:08.442Z"
+ },
+ "Municipal Property Assessment Corporation (MPAC)": {
+  "status": "found",
+  "url": "https://careers.mpac.ca/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:22:11.941Z"
+ },
+ "Sault Area Hospital": {
+  "status": "found",
+  "url": "https://sah.on.ca/careers/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:22:57.322Z"
+ },
+ "WorkSafeNB": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:01.393Z"
+ },
+ "City of Barrie": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:01.550Z"
+ },
+ "Toronto Transit Commission (TTC)": {
+  "status": "check_page",
+  "url": "https://www.ttc.ca/Jobs",
+  "site": "https://www.ttc.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:23:02.933Z"
+ },
+ "City of Brantford": {
+  "status": "found",
+  "url": "https://www.brantford.ca/your-government/careers/current-opportunities/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:23:07.261Z"
+ },
+ "City of London": {
+  "status": "found",
+  "url": "https://careers.london.ca/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:23:09.014Z"
+ },
+ "CHUM (Centre hospitalier de l'Université de Montréal)": {
+  "status": "check_page",
+  "url": "https://www.chumontreal.qc.ca/le-chum-votre-hopital/carrieres-stages",
+  "site": "https://www.chumontreal.qc.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:23:12.203Z"
+ },
+ "Sherwin-Williams Canada": {
+  "status": "found",
+  "url": "https://ejhp.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:23:34.057Z"
+ },
+ "City of Abbotsford": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:03.870Z"
+ },
+ "Waterloo Regional Health Network": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:04.032Z"
+ },
+ "WSIB Ontario": {
+  "status": "found",
+  "url": "https://wsib-iaepup.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:24:05.688Z"
+ },
+ "Tata Consultancy Services Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.tcs.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:24:08.920Z"
+ },
+ "City of Saint John": {
+  "status": "check_page",
+  "url": "https://saintjohn.ca/en/small-city-big-opportunities",
+  "site": "https://saintjohn.ca/en",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:24:11.168Z"
+ },
+ "Davies Ward Phillips & Vineberg": {
+  "status": "found",
+  "url": "https://www.dwpv.com/en/careers/career-opportunities",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:25:09.386Z"
+ },
+ "Baker Tilly Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.bakertillyinternational.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:25:11.187Z"
+ },
+ "Kantar Canada": {
+  "status": "check_page",
+  "url": "https://careers.kantar.com/",
+  "site": "https://www.kantar.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:25:16.157Z"
+ },
+ "Toast Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:26:00.597Z"
+ },
+ "QuadReal Property Group": {
+  "status": "found",
+  "url": "https://quadreal.wd10.myworkdayjobs.com/quadreal",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:26:03.484Z"
+ },
+ "AECOM Canada": {
+  "status": "check_page",
+  "url": "https://aecom.com/en-ca/careers/",
+  "site": "http://www.aecom.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:26:08.012Z"
+ },
+ "CES Energy Solutions": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:02.501Z"
+ },
+ "Dream Industrial REIT": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:02.623Z"
+ },
+ "Granite REIT": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:02.796Z"
+ },
+ "Aya Gold & Silver": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:02.995Z"
+ },
+ "First Quantum Minerals": {
+  "status": "found",
+  "url": "https://firstquantum.wd3.myworkdayjobs.com/en-US/First_Quantum_Careers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:27:08.012Z"
+ },
+ "Converge Technology Solutions": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:04.572Z"
+ },
+ "Chandos Construction": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:04.885Z"
+ },
+ "Menkes Developments": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:05.055Z"
+ },
+ "Toromont Industries": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:05.146Z"
+ },
+ "Richelieu Hardware": {
+  "status": "found",
+  "url": "https://richelieu.na.teamtailor.com/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:28:11.556Z"
+ },
+ "Jaya Tech": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:06.668Z"
+ },
+ "KickBack Rewards Systems": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:06.747Z"
+ },
+ "NodeSource": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:07.252Z"
+ },
+ "Rio Tinto Canada": {
+  "status": "found",
+  "url": "https://jobs.riotinto.com/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:29:15.498Z"
+ },
+ "National Research Council Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.nrc-cnrc.gc.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:29:54.630Z"
+ },
+ "Laurentian University": {
+  "status": "found",
+  "url": "https://laurentian.ca/about/careers/administrative-vacancies",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:30:03.359Z"
+ },
+ "BNP Paribas Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.bnpparibas.fr/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:30:04.560Z"
+ },
+ "Douglas College": {
+  "status": "found",
+  "url": "https://agecare.wd10.myworkdayjobs.com/en-US/AgeCare_Careers_External",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:30:29.813Z"
+ },
+ "Methanex": {
+  "status": "check_page",
+  "url": "https://www.methanex.com/careers/overview/",
+  "site": "https://www.methanex.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:30:53.866Z"
+ },
+ "York Regional Police": {
+  "status": "found",
+  "url": "https://jobs.yrp.ca/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:31:06.606Z"
+ },
+ "Centennial College": {
+  "status": "found",
+  "url": "https://centennial.njoyn.com/CL3/xweb/Xweb.asp?tbtoken=YV9YSh8XCBp7E3B2RSciCFM7cG1EcCJVdkhYWl1%2BExZcX0oYW0RpexEHdAkbURNaS3cqWA%3D%3D&chk=ZVpaShw%3D&page=joblisting&CLID=56827",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:31:09.228Z"
+ },
+ "New Brunswick Community College (NBCC)": {
+  "status": "check_page",
+  "url": "https://jobs.glowinthecloud.com/college-communautaire-du-nouveau-brunswick?l=fr",
+  "site": "http://ccnb.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:31:09.497Z"
+ },
+ "Dawson College": {
+  "status": "check_page",
+  "url": "https://www.dawsoncollege.qc.ca/human-resources/",
+  "site": "http://www.dawsoncollege.qc.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:31:13.826Z"
+ },
+ "Element Fleet Management": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:13:55.038Z"
+ },
+ "Plusgrade (Points)": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:13:59.235Z"
+ },
+ "Niagara Health": {
+  "status": "found",
+  "url": "https://careers.niagarahealth.on.ca/erecruit/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:14:04.585Z"
+ },
+ "Alimentation Couche-Tard": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.couche-tard.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:14:06.623Z"
+ },
+ "Honda Canada": {
+  "status": "check_page",
+  "url": "https://www.honda.ca/en/careers",
+  "site": "http://www.honda.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:14:42.341Z"
+ },
+ "Laurentian Bank": {
+  "status": "check_page",
+  "url": "https://www.laurentianbank.ca/en/about-us/careers",
+  "site": "https://www.laurentianbank.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:14:42.609Z"
+ },
+ "FreshBooks": {
+  "status": "check_page",
+  "url": "https://www.freshbooks.com/careers",
+  "site": "https://www.freshbooks.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:14:44.685Z"
+ },
+ "IKEA Canada": {
+  "status": "check_page",
+  "url": "https://www.seeacareerwithus.com/home",
+  "site": "https://www.ikea.com/us/en",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:14:45.289Z"
+ },
+ "Dapper Labs": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:15:00.648Z"
+ },
+ "Pembina Pipeline": {
+  "status": "found",
+  "url": "https://careers.pembina.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:15:02.371Z"
+ },
+ "Stantec": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.stantec.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:15:03.601Z"
+ },
+ "Government of Nova Scotia": {
+  "status": "found",
+  "url": "https://jobs.novascotia.ca/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:15:03.920Z"
+ },
+ "SBI Canada Bank": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:16:01.615Z"
+ },
+ "Deel": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:16:02.072Z"
+ },
+ "Société Générale Canada": {
+  "status": "found",
+  "url": "https://careers.societegenerale.com/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:16:04.344Z"
+ },
+ "Government of Manitoba": {
+  "status": "found",
+  "url": "https://www.jobbank.gc.ca/findajob/resources",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:16:08.646Z"
+ },
+ "Aritzia": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.aritzia.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:16:48.703Z"
+ },
+ "Navacord": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:02.215Z"
+ },
+ "BMO Global Asset Management": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:02.305Z"
+ },
+ "RBC Capital Markets": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:02.475Z"
+ },
+ "PC Financial": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:02.666Z"
+ },
+ "Sydney Credit Union": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:02.994Z"
+ },
+ "Yukon University": {
+  "status": "found",
+  "url": "https://www.yukonu.ca/about-us/careers/current-opportunities",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:17:04.428Z"
+ },
+ "Digital Commerce Bank": {
+  "status": "check_page",
+  "url": "http://ccv4pro.com/careers",
+  "site": "http://ccv4pro.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:17:05.859Z"
+ },
+ "Kensington Capital Partners": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:03.032Z"
+ },
+ "Jarislowsky Fraser": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:03.167Z"
+ },
+ "TorQuest Partners": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:03.259Z"
+ },
+ "FINTRAC": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.fintrac-canafe.gc.ca",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:18:03.797Z"
+ },
+ "SC Johnson Canada": {
+  "status": "found",
+  "url": "https://scj.wd5.myworkdayjobs.com/External_Career_Site_Lifestyle_Brands",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:18:07.540Z"
+ },
+ "Agropur": {
+  "status": "found",
+  "url": "https://agropur.wd3.myworkdayjobs.com/fr-CA/Agropur_Careers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:18:13.965Z"
+ },
+ "BD Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:19:03.932Z"
+ },
+ "MEG Energy": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:19:04.148Z"
+ },
+ "AbbVie Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.abbvie.ca",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:19:08.336Z"
+ },
+ "BHP Canada": {
+  "status": "found",
+  "url": "https://careers.bhp.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:19:08.588Z"
+ },
+ "Pattison Group": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:20:04.443Z"
+ },
+ "Warner Bros. Discovery Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.wbd.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:20:53.427Z"
+ },
+ "LifeLabs": {
+  "status": "check_page",
+  "url": "https://www.lifelabs.com/careers/",
+  "site": "https://www.lifelabs.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:20:58.017Z"
+ },
+ "Halton Regional Police Service": {
+  "status": "check_page",
+  "url": "https://www.haltonpolice.ca/careers/",
+  "site": "http://www.haltonpolice.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:21:09.907Z"
+ },
+ "City of Airdrie": {
+  "status": "check_page",
+  "url": "https://www.airdrie.ca/index.cfm?serviceID=2218",
+  "site": "https://www.airdrie.ca/index.cfm?serviceID=5",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:21:15.488Z"
+ },
+ "Niagara Health Foundation": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.onefoundationfornhs.com",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:21:24.905Z"
+ },
+ "Toronto District School Board": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.tdsb.on.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:21:53.026Z"
+ },
+ "Réseau de transport de la Capitale (RTC)": {
+  "status": "check_page",
+  "url": "https://www.rtcquebec.ca/carriere/faites-carriere-au-rtc",
+  "site": "https://www.rtcquebec.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:21:56.612Z"
+ },
+ "SAAQ": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:22:06.332Z"
+ },
+ "Primary Care Alberta": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:22:06.427Z"
+ },
+ "Ontario Medical Association": {
+  "status": "found",
+  "url": "https://www.oma.org/about-the-oma/careers/job-postings/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:22:07.159Z"
+ },
+ "Bell Textron Canada": {
+  "status": "found",
+  "url": "https://textron.taleo.net/careersection/bell/jobsearch.ftl?lang=en",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:22:11.194Z"
+ },
+ "Saskatchewan Research Council": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.src.sk.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:22:53.420Z"
+ },
+ "Andrew Peller": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:06.895Z"
+ },
+ "City of St. John's": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:07.084Z"
+ },
+ "City of Pickering": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:07.184Z"
+ },
+ "Service New Brunswick": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.snb.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:23:07.622Z"
+ },
+ "McGill University Health Centre": {
+  "status": "check_page",
+  "url": "https://muhc.ca/careers",
+  "site": "https://muhc.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:23:14.756Z"
+ },
+ "Doane Grant Thornton": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:07.427Z"
+ },
+ "City of Belleville": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:07.460Z"
+ },
+ "Wipro Canada": {
+  "status": "found",
+  "url": "https://careers.wipro.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:24:15.408Z"
+ },
+ "Toronto Community Housing": {
+  "status": "found",
+  "url": "https://jobs.dayforcehcm.com/tch/careers",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:24:19.703Z"
+ },
+ "Alcohol and Gaming Commission of Ontario": {
+  "status": "found",
+  "url": "https://jobs.dayforcehcm.com/agco/CANDIDATEPORTAL",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:24:20.738Z"
+ },
+ "Altis Recruitment": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:25:00.146Z"
+ },
+ "Brookfield Properties Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:25:00.423Z"
+ },
+ "Ville de Longueuil": {
+  "status": "check_page",
+  "url": "https://longueuil.quebec/fr/emplois",
+  "site": "https://longueuil.quebec",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:25:03.947Z"
+ },
+ "Cambridge Memorial Hospital": {
+  "status": "found",
+  "url": "https://encareers-cmh.icims.com/",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:25:04.696Z"
+ },
+ "Pivotree": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:26:01.162Z"
+ },
+ "Semtech (Sierra Wireless)": {
+  "status": "found",
+  "url": "https://semtech.wd1.myworkdayjobs.com/SemtechCareers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:26:06.636Z"
+ },
+ "Moody's Canada": {
+  "status": "found",
+  "url": "https://careers.moodys.com/en/search-jobs",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:26:48.951Z"
+ },
+ "Dundee Precious Metals": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:01.544Z"
+ },
+ "Kelt Exploration": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:01.636Z"
+ },
+ "Montage Gold": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.montagegold.com",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:27:02.988Z"
+ },
+ "H&R REIT": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.hr-reit.com",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:27:03.998Z"
+ },
+ "Goodmans": {
+  "status": "check_page",
+  "url": "https://www.goodmans.ca/careers/current-opportunities",
+  "site": "http://www.goodmans.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:27:08.279Z"
+ },
+ "Chase Payment Solutions Canada": {
+  "status": "found",
+  "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:27:16.433Z"
+ },
+ "Paramount Resources": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:02.461Z"
+ },
+ "Zebra Technologies Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.zebra.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:28:02.598Z"
+ },
+ "B2Gold": {
+  "status": "found",
+  "url": "https://careers.b2gold.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:28:10.271Z"
+ },
+ "Intuit Canada": {
+  "status": "found",
+  "url": "https://jobs.intuit.com/search-jobs/Canada/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:28:50.137Z"
+ },
+ "Winpak": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:02.972Z"
+ },
+ "Teravision Technologies": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:03.284Z"
+ },
+ "Ecclesiastical Insurance": {
+  "status": "found",
+  "url": "https://careers.benefactgroup.com/jobs?department=Ecclesiastical+Insurance+UK&query=",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:29:05.908Z"
+ },
+ "Canadian Museum of History": {
+  "status": "found",
+  "url": "https://tre.tbe.taleo.net/tre01/ats/careers/v2/searchResults?org=CMCC&cws=54",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:29:11.803Z"
+ },
+ "Lakehead University": {
+  "status": "found",
+  "url": "https://www.lakeheadu.ca/admissions",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:30:08.904Z"
+ },
+ "Polytechnique Montréal": {
+  "status": "check_page",
+  "url": "https://www.polymtl.ca/carriere/",
+  "site": "http://www.polymtl.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:30:12.653Z"
+ },
+ "Boston Consulting Group Canada": {
+  "status": "found",
+  "url": "https://careers.bcg.com/global/en/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:30:41.586Z"
+ },
+ "Nipissing University": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.nipissingu.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:30:50.551Z"
+ },
+ "Langara College": {
+  "status": "found",
+  "url": "https://langara.wd10.myworkdayjobs.com/External_Employment_Opportunities",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:31:05.420Z"
+ },
+ "Collège Boréal": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.collegeboreal.ca",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:31:06.460Z"
+ },
+ "Vanier College": {
+  "status": "found",
+  "url": "https://careers.vaniercollege.qc.ca/fr_CA/annonces",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:31:10.095Z"
+ },
+ "Collège communautaire du Nouveau-Brunswick (CCNB)": {
+  "status": "check_page",
+  "url": "https://jobs.glowinthecloud.com/college-communautaire-du-nouveau-brunswick?l=fr",
+  "site": "http://ccnb.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:31:12.403Z"
+ },
+ "Roots": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:13:56.741Z"
+ },
+ "Wave Financial": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:13:57.693Z"
+ },
+ "Apotex": {
+  "status": "found",
+  "url": "https://careers.apotex.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:14:01.449Z"
+ },
+ "Mitel": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.mitel.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:14:07.891Z"
+ },
+ "Beneva": {
+  "status": "found",
+  "url": "https://beneva.wd10.myworkdayjobs.com/en-US/BenevaSite_carriere",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:14:08.292Z"
+ },
+ "Behaviour Interactive": {
+  "status": "check_page",
+  "url": "https://www.bhvr.com/jobs/",
+  "site": "https://www.bhvr.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:14:09.212Z"
+ },
+ "Ontario Public Service": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://opseu.org/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:14:47.632Z"
+ },
+ "WSP Global": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.wspgroup.com",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:14:54.709Z"
+ },
+ "MEC (Mountain Equipment Company)": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.mec.ca/en",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:14:55.921Z"
+ },
+ "Yukon Hospitals": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:15:07.131Z"
+ },
+ "University of New Brunswick": {
+  "status": "check_page",
+  "url": "https://www.unb.ca/moneymatters/employment.html",
+  "site": "https://www.unb.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:15:07.735Z"
+ },
+ "Tourmaline Oil": {
+  "status": "check_page",
+  "url": "https://www.tourmalineoil.com/careers",
+  "site": "https://www.tourmalineoil.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:15:10.189Z"
+ },
+ "Government of Newfoundland and Labrador": {
+  "status": "check_page",
+  "url": "https://www.gov.nl.ca/department-update/",
+  "site": "https://www.gov.nl.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:15:13.865Z"
+ },
+ "Brookfield Asset Management": {
+  "status": "found",
+  "url": "https://brookfield.wd5.myworkdayjobs.com/brookfield",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:15:13.891Z"
+ },
+ "Fairstone Bank": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:16:07.978Z"
+ },
+ "IMP Group": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:16:08.401Z"
+ },
+ "Remote.com": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:16:08.401Z"
+ },
+ "Sumitomo Mitsui Banking Corp Canada": {
+  "status": "check_page",
+  "url": "https://www.smbc.co.jp/global/careers/index.html",
+  "site": "http://www.smbc.co.jp/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:16:12.800Z"
+ },
+ "Workday": {
+  "status": "found",
+  "url": "https://workday.wd5.myworkdayjobs.com/Workday",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:16:49.071Z"
+ },
+ "Connect First Credit Union": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:00.910Z"
+ },
+ "RBC Global Asset Management": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:00.980Z"
+ },
+ "Kawartha Credit Union": {
+  "status": "check_page",
+  "url": "https://www.kawarthacu.com/about/careers",
+  "site": "https://www.kawarthacu.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:17:08.132Z"
+ },
+ "Clairvest Group": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:01.548Z"
+ },
+ "Mark Anthony Group": {
+  "status": "found",
+  "url": "https://recruiting2.ultipro.com/MAR5000MAG/JobBoard/8febf0ae-8776-428e-b625-2faa005b7fc1",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:18:02.515Z"
+ },
+ "Sollio Cooperative Group": {
+  "status": "check_page",
+  "url": "https://sollio.coop/fr/carrieres",
+  "site": "http://lacoop.coop/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:18:05.859Z"
+ },
+ "Kimberly-Clark Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.kimberly-clark.com",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:18:48.780Z"
+ },
+ "Sunoco LP Canada (Parkland)": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.calgaryarea.com/se/parkland/parkland.htm",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:19:07.750Z"
+ },
+ "Alstom Canada": {
+  "status": "found",
+  "url": "https://jobsearch.alstom.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:19:13.433Z"
+ },
+ "Wajax": {
+  "status": "check_page",
+  "url": "https://www.wajax.com/careers/",
+  "site": "https://www.wajax.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:19:14.543Z"
+ },
+ "TD Securities": {
+  "status": "found",
+  "url": "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:20:00.762Z"
+ },
+ "K+S Potash Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:20:03.224Z"
+ },
+ "belairdirect": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:20:03.260Z"
+ },
+ "Innergex Renewable Energy": {
+  "status": "found",
+  "url": "https://fa-ewqm-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:20:09.486Z"
+ },
+ "Inter Pipeline": {
+  "status": "found",
+  "url": "https://iplcareers.jobs.hr.cloud.sap/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:20:52.957Z"
+ },
+ "Smurfit Westrock Canada": {
+  "status": "check_page",
+  "url": "https://www.smurfitkappa.com/people/careers",
+  "site": "http://www.smurfitkappa.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:21:04.319Z"
+ },
+ "Durham Regional Police Service": {
+  "status": "check_page",
+  "url": "https://www.drps.ca/careers",
+  "site": "http://www.drps.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:21:30.070Z"
+ },
+ "City of Sault Ste. Marie": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:22:05.213Z"
+ },
+ "Financial Accountability Office of Ontario": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:22:05.405Z"
+ },
+ "Kia Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.kia.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:22:05.934Z"
+ },
+ "Ricoh Canada": {
+  "status": "check_page",
+  "url": "https://jp.ricoh.com/jobs",
+  "site": "https://jp.ricoh.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:22:16.545Z"
+ },
+ "City of Mount Pearl": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:06.028Z"
+ },
+ "Johnson Controls Canada": {
+  "status": "found",
+  "url": "https://jci.wd5.myworkdayjobs.com/en-US/JCI",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:23:06.191Z"
+ },
+ "Strathcona County": {
+  "status": "found",
+  "url": "https://fa-erjf-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:23:07.690Z"
+ },
+ "Acute Care Alberta": {
+  "status": "found",
+  "url": "https://careers.acutecarealberta.ca/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:23:09.520Z"
+ },
+ "Société de transport de Laval": {
+  "status": "check_page",
+  "url": "https://stlaval.ca/carriere",
+  "site": "http://www.stl.laval.qc.ca/en/home/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:23:11.925Z"
+ },
+ "Ontario Financing Authority": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:06.405Z"
+ },
+ "City of Vaughan": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:06.594Z"
+ },
+ "City of Niagara Falls": {
+  "status": "found",
+  "url": "https://niagarafalls.wd10.myworkdayjobs.com/CNF",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:24:07.556Z"
+ },
+ "Women's College Hospital": {
+  "status": "found",
+  "url": "https://jobs.dayforcehcm.com/wch/CANDIDATEPORTAL",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:24:27.575Z"
+ },
+ "Newfoundland and Labrador Liquor Corporation": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.nfliquor.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:24:53.775Z"
+ },
+ "LatentView Analytics": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:25:07.269Z"
+ },
+ "Oliver Wyman Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://olliewyman.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:25:08.256Z"
+ },
+ "Island Health": {
+  "status": "found",
+  "url": "https://careers.islandhealth.ca/apply-now/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:25:11.359Z"
+ },
+ "MaRS Discovery District": {
+  "status": "check_page",
+  "url": "https://www.marsdd.com/partners/",
+  "site": "https://www.marsdd.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:25:11.823Z"
+ },
+ "Volaris Group": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:26:08.131Z"
+ },
+ "Town of Whitby": {
+  "status": "found",
+  "url": "https://whitby.wd10.myworkdayjobs.com/EXT",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:26:09.125Z"
+ },
+ "Abacus Data": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.abacusdata.ca",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:26:09.742Z"
+ },
+ "EBC Inc.": {
+  "status": "check_page",
+  "url": "https://ebcinc.com/en/careers/",
+  "site": "https://www.ebcinc.com/en/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:26:12.875Z"
+ },
+ "Canada Health Infoway": {
+  "status": "check_page",
+  "url": "https://www.infoway-inforoute.ca/en/careers",
+  "site": "http://www.infoway-inforoute.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:26:16.851Z"
+ },
+ "Qualifacts Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:00.762Z"
+ },
+ "City of Red Deer": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:00.876Z"
+ },
+ "Badger Infrastructure Solutions": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:01.016Z"
+ },
+ "Choice Properties REIT": {
+  "status": "found",
+  "url": "https://myview.wd3.myworkdayjobs.com/Choice_Properties_REIT",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:27:04.474Z"
+ },
+ "Cadence Design Systems Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.cadence.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:27:57.873Z"
+ },
+ "Keyera": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:01.371Z"
+ },
+ "Parex Resources": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:01.394Z"
+ },
+ "Headwater Exploration": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:01.466Z"
+ },
+ "Brookfield Renewable": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:01.520Z"
+ },
+ "Seabridge Gold": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.seabridgegold.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:28:02.438Z"
+ },
+ "AltaGas": {
+  "status": "found",
+  "url": "https://wgl.wd5.myworkdayjobs.com/AltaGas",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:28:04.720Z"
+ },
+ "Graham Construction": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:01.912Z"
+ },
+ "JupiterOne": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:01.999Z"
+ },
+ "Nuclear Promise X": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:02.102Z"
+ },
+ "WCB Saskatchewan": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:02.133Z"
+ },
+ "Fortuna Mining": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:02.257Z"
+ },
+ "British Columbia Investment Management Corp. (BCI)": {
+  "status": "found",
+  "url": "https://bci.wd10.myworkdayjobs.com/BCI_Careers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:29:02.881Z"
+ },
+ "Hiive": {
+  "status": "found",
+  "url": "https://jobs.ashbyhq.com/claritymovescapital",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:30:02.959Z"
+ },
+ "OCAD University": {
+  "status": "found",
+  "url": "https://www.ocadu.ca/student-services/centre-emerging-artists-and-designers/student-and-alumni-jobs",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:30:03.073Z"
+ },
+ "University of Winnipeg": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://uwinnipeg.ca",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:30:03.466Z"
+ },
+ "InQuicker": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:31:03.749Z"
+ },
+ "Okanagan College": {
+  "status": "found",
+  "url": "https://jobs.lever.co/okanagan",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:31:05.345Z"
+ },
+ "Université TÉLUQ": {
+  "status": "found",
+  "url": "https://phh.tbe.taleo.net/phh01/ats/careers/jobSearch.jsp?org=TELUQ&cws=1",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:31:07.378Z"
+ },
+ "MacEwan University": {
+  "status": "check_page",
+  "url": "https://www.macewan.ca/about-macewan/careers/index.html",
+  "site": "https://www.macewan.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:31:08.996Z"
+ },
+ "VGS": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.vgs-online.de/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:31:11.738Z"
+ },
+ "Conestoga College": {
+  "status": "check_page",
+  "url": "https://www.conestogac.on.ca/subsidized-training/employment/better-jobs-ontario",
+  "site": "https://www.conestogac.on.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:32:05.054Z"
+ },
+ "Loyalist College": {
+  "status": "found",
+  "url": "https://gjobs.neogov.ca/careers/loyalistcollege",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:32:08.452Z"
+ },
+ "Enbridge Gas Ontario": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:14:11.486Z"
+ },
+ "League": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:14:12.723Z"
+ },
+ "Fairfax Financial": {
+  "status": "check_page",
+  "url": "https://www.fairfax.ca/employment/",
+  "site": "https://www.fairfax.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:14:15.740Z"
+ },
+ "Calian Group": {
+  "status": "found",
+  "url": "https://careers.calian.com/careers/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:14:22.023Z"
+ },
+ "Price Industries": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:15:01.497Z"
+ },
+ "Semios": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:15:01.657Z"
+ },
+ "West Fraser": {
+  "status": "found",
+  "url": "https://www.westfraser.com/careers/current-opportunities",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:15:04.498Z"
+ },
+ "Giant Tiger": {
+  "status": "found",
+  "url": "https://gianttiger.wd3.myworkdayjobs.com/en-US/gianttiger",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:15:42.511Z"
+ },
+ "BioWare": {
+  "status": "check_page",
+  "url": "https://www.bioware.com/careers/",
+  "site": "https://www.bioware.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:15:47.632Z"
+ },
+ "Cameco": {
+  "status": "check_page",
+  "url": "https://www.cameco.com/careers",
+  "site": "https://www.cameco.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:15:48.554Z"
+ },
+ "Maritime Electric": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.maritimeelectric.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:16:05.576Z"
+ },
+ "First Nations Bank of Canada": {
+  "status": "check_page",
+  "url": "https://www.fnbc.ca/about/who-we-are/careers",
+  "site": "http://www.firstnationsbank.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:16:10.405Z"
+ },
+ "J.D. Irving": {
+  "status": "check_page",
+  "url": "https://careers.jdirving.com/#en/sites/Careers",
+  "site": "http://www.jdirving.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:16:11.062Z"
+ },
+ "Saputo": {
+  "status": "found",
+  "url": "https://saputo.wd5.myworkdayjobs.com/en-US/Saputo_External_Careers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:16:16.863Z"
+ },
+ "Government of Yukon": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://yukon.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:16:50.529Z"
+ },
+ "Innovation Credit Union": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:05.191Z"
+ },
+ "Rogers Bank": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:05.581Z"
+ },
+ "Mercer Canada": {
+  "status": "check_page",
+  "url": "https://hr.mercer.edu/",
+  "site": "http://www.mercer.edu/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:17:06.265Z"
+ },
+ "London Drugs": {
+  "status": "check_page",
+  "url": "https://london-drugs-limited-jobs.careerplug.com/account",
+  "site": "https://www.londondrugs.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:17:12.729Z"
+ },
+ "Novacap": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:07.302Z"
+ },
+ "Canaccord Genuity": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:07.438Z"
+ },
+ "Université de Moncton": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.umoncton.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:18:11.594Z"
+ },
+ "ATCO": {
+  "status": "check_page",
+  "url": "https://www.atco.com/en-ca/about-us/careers.html",
+  "site": "http://www.atco.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:18:15.026Z"
+ },
+ "CPA Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.cpacanada.ca/en",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:18:54.055Z"
+ },
+ "TD Asset Management": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:19:01.524Z"
+ },
+ "Sherritt International": {
+  "status": "check_page",
+  "url": "https://sherritt.com/careers/opportunities/",
+  "site": "http://www.sherritt.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:19:04.624Z"
+ },
+ "Ferrero Canada": {
+  "status": "check_page",
+  "url": "https://www.ferrerocareers.com/int/en/",
+  "site": "https://www.ferrero.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:19:10.389Z"
+ },
+ "Sofina Foods": {
+  "status": "check_page",
+  "url": "https://www.sofinafoods.com/careers/",
+  "site": "http://www.sofinafoods.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:19:52.500Z"
+ },
+ "Aéroports de Montréal": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.admtl.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:20:04.825Z"
+ },
+ "Énergir": {
+  "status": "found",
+  "url": "https://carrieres.energir.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:20:07.564Z"
+ },
+ "Canadian Bankers Association": {
+  "status": "check_page",
+  "url": "https://cba.ca/about-us/careers-at-cba",
+  "site": "https://www.cba.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:20:10.800Z"
+ },
+ "Gay Lea Foods": {
+  "status": "check_page",
+  "url": "https://www.gaylea.com/about-us/employment/",
+  "site": "https://www.gaylea.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:20:11.171Z"
+ },
+ "3M Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.3mcanada.ca/3M/fr_CA/company-ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:20:50.188Z"
+ },
+ "Eaton Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:21:05.650Z"
+ },
+ "Waypoint Centre for Mental Health Care": {
+  "status": "check_page",
+  "url": "https://www.waypointcentre.ca/get-involved/join-our-team",
+  "site": "http://www.waypointcentre.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:21:13.612Z"
+ },
+ "Bristol Myers Squibb Canada": {
+  "status": "found",
+  "url": "https://bristolmyerssquibb.wd5.myworkdayjobs.com/en-US/BMS",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:21:30.555Z"
+ },
+ "Collingwood General and Marine Hospital": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:22:07.528Z"
+ },
+ "Autorité régionale de transport métropolitain (ARTM)": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:22:07.955Z"
+ },
+ "Pitney Bowes Canada": {
+  "status": "found",
+  "url": "https://pitneybowes.wd1.myworkdayjobs.com/en-US/PBCareers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:22:12.167Z"
+ },
+ "Day & Ross": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:01.436Z"
+ },
+ "City of Summerside": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:01.918Z"
+ },
+ "Norfolk General Hospital": {
+  "status": "check_page",
+  "url": "https://www.ngh.on.ca/careers/",
+  "site": "http://www.ngh.on.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:23:04.162Z"
+ },
+ "City of Welland": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:03.369Z"
+ },
+ "eHealth Saskatchewan": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:03.490Z"
+ },
+ "Office of the Auditor General of Ontario": {
+  "status": "found",
+  "url": "https://www.auditor.on.ca/careers.html",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:24:05.813Z"
+ },
+ "Peel Regional Police": {
+  "status": "found",
+  "url": "https://www.peelpolice.ca/careers/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:24:05.853Z"
+ },
+ "Waterloo Regional Police Service": {
+  "status": "found",
+  "url": "https://careers.regionofwaterloo.ca/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:24:11.152Z"
+ },
+ "City of St. Albert": {
+  "status": "found",
+  "url": "https://clients.njoyn.com/cl4/xweb/Xweb.asp?tbtoken=YFpaQx5QDVABZS4lLkAuJF4FMCYgY087eG0raVVZdCdMIVkNenldL0MZUTcccGAGBzAYGhJQSnhsF3U%3D&chk=ZVpaShM%3D&page=joblisting&CLID=72388",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:24:42.984Z"
+ },
+ "City of Vancouver": {
+  "status": "found",
+  "url": "https://jobs.vancouver.ca/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:24:56.523Z"
+ },
+ "Richter": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:25:05.826Z"
+ },
+ "Centre for Addiction and Mental Health (CAMH)": {
+  "status": "found",
+  "url": "https://iaemup.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CAMH",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:25:10.157Z"
+ },
+ "Lakeridge Health": {
+  "status": "found",
+  "url": "https://careers.lakeridgehealth.on.ca/erecruit/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:25:11.438Z"
+ },
+ "Mu Sigma": {
+  "status": "check_page",
+  "url": "https://www.mu-sigma.com/career/",
+  "site": "http://www.mu-sigma.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:25:11.964Z"
+ },
+ "Yukon Development Corporation": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://yukon.ca/en/yukon-development-corporation",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:25:53.072Z"
+ },
+ "Narrative Research": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:26:08.502Z"
+ },
+ "Dillon Consulting": {
+  "status": "found",
+  "url": "https://external-dillon.icims.com/jobs/intro",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:26:21.601Z"
+ },
+ "Dayforce": {
+  "status": "found",
+  "url": "https://jobs.dayforcehcm.com/mydayforce/alljobs",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:26:28.423Z"
+ },
+ "CBRE Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.cbre.com",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:26:55.648Z"
+ },
+ "MSCI Montreal": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:01.857Z"
+ },
+ "Synopsys Canada": {
+  "status": "found",
+  "url": "https://careers.synopsys.com/search-jobs",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:27:02.800Z"
+ },
+ "Interior Health": {
+  "status": "found",
+  "url": "https://jobs.interiorhealth.ca/?utm_source=Interior+Health&utm_medium=Careers&utm_campaign=Explore+All+Jobs",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:27:02.890Z"
+ },
+ "London Health Sciences Centre": {
+  "status": "check_page",
+  "url": "https://www.lhsc.on.ca/careers",
+  "site": "http://www.lhsc.on.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:27:06.815Z"
+ },
+ "Killam Apartment REIT": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:04.049Z"
+ },
+ "Perpetua Resources": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:04.314Z"
+ },
+ "i-80 Gold": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:04.473Z"
+ },
+ "BRP Inc.": {
+  "status": "check_page",
+  "url": "https://www.brp.com/en/careers.html",
+  "site": "https://www.brp.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:28:05.219Z"
+ },
+ "NexGen Energy": {
+  "status": "found",
+  "url": "https://www.nexgenenergy.ca/careers/home",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:28:22.694Z"
+ },
+ "Labatt Breweries of Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:06.402Z"
+ },
+ "Borden Ladner Gervais (BLG)": {
+  "status": "found",
+  "url": "https://blgllp.wd10.myworkdayjobs.com/en-US/BLG-External",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:29:08.460Z"
+ },
+ "Tower Research Capital Canada": {
+  "status": "check_page",
+  "url": "https://tower-research.com/careers/",
+  "site": "http://www.tower-research.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:29:09.682Z"
+ },
+ "Stencil": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:30:08.504Z"
+ },
+ "Evrone": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:30:08.610Z"
+ },
+ "Canadian Museum of Nature": {
+  "status": "check_page",
+  "url": "https://nature.ca/en/careers/",
+  "site": "https://nature.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:30:16.152Z"
+ },
+ "PepsiCo Canada": {
+  "status": "check_page",
+  "url": "https://www.pepsico.ca/careers",
+  "site": "http://www.pepsico.ca/en/index.html",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:30:18.207Z"
+ },
+ "Superior Plus": {
+  "status": "found",
+  "url": "https://jobs.dayforcehcm.com/superiorplus/SPCAREERS",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:30:34.107Z"
+ },
+ "Episource": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:31:02.676Z"
+ },
+ "Mount Allison University": {
+  "status": "check_page",
+  "url": "https://mta.ca/about/work-at-mta",
+  "site": "https://mta.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:31:05.460Z"
+ },
+ "Trinity Western University": {
+  "status": "found",
+  "url": "https://www.twu.ca/apply-twu",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:31:06.462Z"
+ },
+ "Selkirk College": {
+  "status": "found",
+  "url": "https://www.selkirk.ca/about-selkirk/careers",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:31:11.982Z"
+ },
+ "Mohawk College": {
+  "status": "check_page",
+  "url": "https://mcintyrepac.ca/.well-known/sgcaptcha/?r=%2Fcareers&y=ipc:3.42.157.53:1794774725.089",
+  "site": "https://mcintyrepac.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:32:07.562Z"
+ },
+ "NAIT (Northern Alberta Institute of Technology)": {
+  "status": "found",
+  "url": "https://nait.wd10.myworkdayjobs.com/NAIT_Careers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:32:16.153Z"
+ },
+ "Cégep de Sainte-Foy": {
+  "status": "check_page",
+  "url": "https://carrieres.csfoy.ca/",
+  "site": "https://www.cegep-ste-foy.qc.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:32:27.194Z"
+ },
+ "Onex": {
+  "status": "found",
+  "url": "https://job-boards.greenhouse.io/onexgeneral",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:14:01.786Z"
+ },
+ "TouchBistro": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:14:02.578Z"
+ },
+ "McMaster University": {
+  "status": "check_page",
+  "url": "https://hr.mcmaster.ca/careers/",
+  "site": "https://www.mcmaster.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:14:08.598Z"
+ },
+ "LCBO": {
+  "status": "found",
+  "url": "https://lcbo.wd3.myworkdayjobs.com/LCBOCareerSite",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:14:28.706Z"
+ },
+ "Porter Airlines": {
+  "status": "found",
+  "url": "https://careers-flyporter.icims.com",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:14:50.457Z"
+ },
+ "Simons": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:15:02.469Z"
+ },
+ "University of Victoria": {
+  "status": "check_page",
+  "url": "https://www.uvic.ca/faculty-staff/careers/why-apply-to-uvic/index.php",
+  "site": "https://www.uvic.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:15:03.377Z"
+ },
+ "EPCOR": {
+  "status": "found",
+  "url": "https://werklundcentre.ca/our-story/who-we-are/careers-volunteers",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:15:04.851Z"
+ },
+ "Save-On-Foods": {
+  "status": "check_page",
+  "url": "https://sofmc.com/careers/",
+  "site": "https://sofmc.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:15:10.687Z"
+ },
+ "University of Saskatchewan": {
+  "status": "found",
+  "url": "https://usask.csod.com/ux/ats/careersite/14/home?c=usask",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:15:16.401Z"
+ },
+ "Eastlink": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.eastlinkcentrepei.com",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:16:08.129Z"
+ },
+ "Visa Canada": {
+  "status": "found",
+  "url": "https://visa.wd5.myworkdayjobs.com/Visa",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:16:42.622Z"
+ },
+ "Intact Public Entities": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:00.291Z"
+ },
+ "CAA Insurance": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:00.826Z"
+ },
+ "Caisse de dépôt et placement du Québec (CDPQ)": {
+  "status": "found",
+  "url": "https://cdpq.wd10.myworkdayjobs.com/fr-CA/CDPQ",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:17:03.865Z"
+ },
+ "Bausch Health": {
+  "status": "found",
+  "url": "https://careers.bauschhealth.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:17:11.274Z"
+ },
+ "Allianz Global Assistance Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.allianz-partners.fr/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:17:47.786Z"
+ },
+ "Canadian Investment Regulatory Organization (CIRO)": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:02.094Z"
+ },
+ "Mosaic Potash": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:02.943Z"
+ },
+ "Bayer Canada": {
+  "status": "found",
+  "url": "https://nordiccareers.bayer.com/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:18:13.765Z"
+ },
+ "Cavendish Farms": {
+  "status": "check_page",
+  "url": "https://us.cavendishfarms.com/en/careers/",
+  "site": "https://www.cavendishfarms.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:18:51.653Z"
+ },
+ "Hershey Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.hersheycanada.com/fr/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:19:06.919Z"
+ },
+ "Burnbrae Farms": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.burnbraefarms.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:19:06.966Z"
+ },
+ "Heidelberg Materials Canada": {
+  "status": "found",
+  "url": "https://heidelbergmaterials.wd3.myworkdayjobs.com/en-US/Global_HM_Career_Site",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:19:34.906Z"
+ },
+ "Honeywell Canada": {
+  "status": "found",
+  "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Honeywell",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:19:52.057Z"
+ },
+ "Subaru Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.subaru.jp/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:20:07.905Z"
+ },
+ "TotalEnergies EP Canada": {
+  "status": "check_page",
+  "url": "https://careers.totalenergies.com/en",
+  "site": "https://corporate.totalenergies.no/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:20:08.562Z"
+ },
+ "Coca-Cola Canada Bottling": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:21:07.557Z"
+ },
+ "Grey Bruce Health Services (BrightShores)": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:21:07.646Z"
+ },
+ "Leon's Furniture": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:21:07.668Z"
+ },
+ "The Calgary Airport Authority": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:21:07.772Z"
+ },
+ "Trimac Transportation": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:21:07.791Z"
+ },
+ "Canadian Medical Protective Association": {
+  "status": "found",
+  "url": "https://jobs.jobvite.com/cmpa/jobs",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:22:02.260Z"
+ },
+ "Town of Newmarket": {
+  "status": "found",
+  "url": "https://newmarket.hua.hrsmart.com/hr/ats/JobSearch/viewAll",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:22:06.494Z"
+ },
+ "Ottawa-Carleton District School Board": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.ocdsb.ca",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:22:48.040Z"
+ },
+ "Trans Mountain": {
+  "status": "found",
+  "url": "https://careers.transmountain.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:22:54.833Z"
+ },
+ "Hôtel-Dieu Shaver Health and Rehabilitation Centre": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:01.792Z"
+ },
+ "Northern Health": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:23:02.117Z"
+ },
+ "Parker Hannifin Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.parker.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:23:04.715Z"
+ },
+ "City of Windsor": {
+  "status": "check_page",
+  "url": "https://www.citywindsor.ca/city-hall/employment-opportunities",
+  "site": "https://www.citywindsor.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:23:08.342Z"
+ },
+ "City of St. Catharines": {
+  "status": "check_page",
+  "url": "https://www.stcatharines.ca/council-and-administration/careers/",
+  "site": "https://www.stcatharines.ca/en/building-and-renovating/resources/Documents/List-of-All-Designated-Heritage-Properties.pdf",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:23:09.008Z"
+ },
+ "Ville de Saguenay": {
+  "status": "check_page",
+  "url": "https://carriere.saguenay.ca/",
+  "site": "https://ville.saguenay.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:23:15.633Z"
+ },
+ "PEI Liquor Control Commission": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:03.026Z"
+ },
+ "Nunavut Housing Corporation": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:03.228Z"
+ },
+ "Tarion": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:03.475Z"
+ },
+ "City of Peterborough": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:25:04.433Z"
+ },
+ "Payworks": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:25:04.528Z"
+ },
+ "Baycrest": {
+  "status": "found",
+  "url": "https://jobs-ca.silkroad.com/Baycrest/Careers",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:25:05.828Z"
+ },
+ "Edmonton Police Service": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.edmontonpolice.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:25:06.020Z"
+ },
+ "Adecco Canada": {
+  "status": "found",
+  "url": "https://careers.adeccogroup.com/en/search-jobs?acm=ALL&alrpm=ALL&ascf=[%7B%22key%22:%22travel%22,%22value%22:%22Pontoon%22%7D]",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:25:07.312Z"
+ },
+ "Mallette": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.mallette.ca",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:26:13.104Z"
+ },
+ "Tech Mahindra Canada": {
+  "status": "check_page",
+  "url": "https://www.techmahindra.com/careers/",
+  "site": "https://www.techmahindra.com/en-in/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:26:19.560Z"
+ },
+ "Epic Games Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.epicgames.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:26:53.188Z"
+ },
+ "R.J. Burnside & Associates": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:06.532Z"
+ },
+ "Americas Gold and Silver": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:06.879Z"
+ },
+ "Norton Rose Fulbright Canada": {
+  "status": "found",
+  "url": "https://nrfcanada.wd10.myworkdayjobs.com/fr-CA/NRFC",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:27:12.952Z"
+ },
+ "FactSet Canada": {
+  "status": "found",
+  "url": "https://factset.wd108.myworkdayjobs.com/FactSetCareers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:27:16.229Z"
+ },
+ "Birchcliff Energy": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:08.145Z"
+ },
+ "Labrador Iron Ore Royalty": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:08.150Z"
+ },
+ "Vermilion Energy": {
+  "status": "found",
+  "url": "https://vermilionenergy.wd10.myworkdayjobs.com/VEI_EXTERNAL",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:28:09.104Z"
+ },
+ "Sienna Senior Living": {
+  "status": "check_page",
+  "url": "https://careers.siennaliving.ca/",
+  "site": "https://www.siennaliving.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:28:17.635Z"
+ },
+ "Constellation Software": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.csisoftware.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:28:48.611Z"
+ },
+ "WPP Media": {
+  "status": "found",
+  "url": "https://job-boards.greenhouse.io/wppmedia",
+  "via": "job board found from the company name",
+  "checked": "2026-11-15T20:28:49.326Z"
+ },
+ "Pet Valu": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.petvalu.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:28:55.235Z"
+ },
+ "Citi Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:00.959Z"
+ },
+ "Zemoso": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:01.074Z"
+ },
+ "Taplytics": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:01.189Z"
+ },
+ "Perkins&Will Canada": {
+  "status": "found",
+  "url": "https://recruiting2.ultipro.com/PER1007PWILL/JobBoard/0ca393a4-bf82-4db6-acae-91e6a0315a4a",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:29:03.190Z"
+ },
+ "Advanis": {
+  "status": "check_page",
+  "url": "https://advanis.net/careers/",
+  "site": "http://www.advanis.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:29:05.305Z"
+ },
+ "Defence Construction Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:30:02.310Z"
+ },
+ "CareCru": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:30:02.455Z"
+ },
+ "Telefilm Canada": {
+  "status": "check_page",
+  "url": "https://telefilm.ca/en/who-we-are/careers",
+  "site": "http://www.telefilm.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:30:07.510Z"
+ },
+ "Fisheries and Oceans Canada": {
+  "status": "found",
+  "url": "https://emploisfp-psjobs.cfp-psc.gc.ca/psrs-srfp/applicant/page2440?classificationInfos=&departments=&title=&tab=1&search=Search%20jobs&department=39&officialLanguage=&log=false&toggleLanguage=en",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:30:08.832Z"
+ },
+ "St. Thomas University": {
+  "status": "check_page",
+  "url": "https://stu.ca/employment/",
+  "site": "https://stu.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:31:03.958Z"
+ },
+ "37signals": {
+  "status": "check_page",
+  "url": "https://37signals.com/jobs",
+  "site": "https://basecamp.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:31:06.622Z"
+ },
+ "Cégep du Vieux Montréal": {
+  "status": "check_page",
+  "url": "https://www.cvm.qc.ca/minisite/ressources-humaines/",
+  "site": "http://www.cvm.qc.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:31:07.664Z"
+ },
+ "Blameless": {
+  "status": "check_page",
+  "url": "https://blamelessgames.com/",
+  "site": "http://www.blamelessgames.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:31:09.197Z"
+ },
+ "Durham College": {
+  "status": "check_page",
+  "url": "https://durhamcollege.ca/about/employment-opportunities",
+  "site": "http://www.durhamcollege.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:32:07.371Z"
+ },
+ "Northern College": {
+  "status": "found",
+  "url": "https://www.northerncollege.ca/careers/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:32:08.334Z"
+ },
+ "Definity Financial": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:14:18.449Z"
+ },
+ "CPP Investments": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://cppib.com/en/home.html",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:14:19.795Z"
+ },
+ "CBC/Radio-Canada": {
+  "status": "check_page",
+  "url": "https://cbc.radio-canada.ca/en/404",
+  "site": "https://cbc.radio-canada.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:14:25.557Z"
+ },
+ "Nulogy": {
+  "status": "check_page",
+  "url": "https://nulogy.com/company/careers/",
+  "site": "http://www.nulogy.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:14:25.931Z"
+ },
+ "Restaurant Brands International (Tim Hortons)": {
+  "status": "check_page",
+  "url": "https://careers.rbi.com/global/en",
+  "site": "http://www.rbi.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:14:32.131Z"
+ },
+ "Air Transat": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.airtransat.com/en-CA/home",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:15:05.585Z"
+ },
+ "CPKC (Canadian Pacific Kansas City)": {
+  "status": "check_page",
+  "url": "https://www.cpkcr.com/en/careers.html",
+  "site": "https://www.cpkcr.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:15:07.000Z"
+ },
+ "University of Alberta": {
+  "status": "found",
+  "url": "https://iaejup.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/UOA-Careers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:15:13.677Z"
+ },
+ "McGill University": {
+  "status": "found",
+  "url": "https://mcgill.wd3.myworkdayjobs.com/mcgill_careers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:15:13.981Z"
+ },
+ "BioVectra": {
+  "status": "found",
+  "url": "https://agilent.wd5.myworkdayjobs.com/Agilent_Student_Careers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:16:07.514Z"
+ },
+ "Diavik Diamond Mine (Rio Tinto)": {
+  "status": "found",
+  "url": "https://jobs.riotinto.com/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:16:11.135Z"
+ },
+ "Lightspeed Commerce": {
+  "status": "found",
+  "url": "https://www.lightspeedhq.com/careers/openings/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:16:16.396Z"
+ },
+ "Reitmans": {
+  "status": "found",
+  "url": "https://careers.smartrecruiters.com/ReitmansCanadaLteLtd",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:16:35.785Z"
+ },
+ "BNY Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:07.087Z"
+ },
+ "Proposify": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:07.351Z"
+ },
+ "Fortis Inc.": {
+  "status": "check_page",
+  "url": "https://www.fortisinc.com/careers",
+  "site": "https://www.fortisinc.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:17:09.013Z"
+ },
+ "Cambrian Credit Union": {
+  "status": "check_page",
+  "url": "https://www.cambrian.mb.ca/about-us/careers",
+  "site": "https://cambrian.mb.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:17:14.256Z"
+ },
+ "IBM Canada": {
+  "status": "check_page",
+  "url": "https://www.ibm.com/careers?lnk=hpii1caen",
+  "site": "http://www.ibm.com/ca/en/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:17:55.319Z"
+ },
+ "TD Insurance": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:00.599Z"
+ },
+ "Allstate Insurance Company of Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:00.718Z"
+ },
+ "Edward Jones Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:18:01.122Z"
+ },
+ "Stifel Canada": {
+  "status": "found",
+  "url": "https://careers-stifel.icims.com",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:18:10.700Z"
+ },
+ "VersaBank": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:19:02.718Z"
+ },
+ "Haventree Bank": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:19:03.138Z"
+ },
+ "Kruger Products": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:19:03.373Z"
+ },
+ "PSP Investments": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:19:03.438Z"
+ },
+ "Dow Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.defense.gov/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:19:05.541Z"
+ },
+ "Canada Bread (Grupo Bimbo)": {
+  "status": "check_page",
+  "url": "https://bimbocanada.com/careers",
+  "site": "http://www.canadabread.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:19:07.455Z"
+ },
+ "Algoma Steel": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:20:04.918Z"
+ },
+ "Dorel Industries": {
+  "status": "check_page",
+  "url": "https://www.dorel.com/pages/careers",
+  "site": "http://www.dorel.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:20:09.845Z"
+ },
+ "Foodtastic": {
+  "status": "check_page",
+  "url": "https://foodtastic.ca/become-a-franchisee/",
+  "site": "https://foodtastic.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:20:11.655Z"
+ },
+ "Edmonton International Airport": {
+  "status": "check_page",
+  "url": "https://flyyeg.com/corporate/careers/",
+  "site": "https://flyeia.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:20:15.572Z"
+ },
+ "Distributel": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.distributel.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:20:16.784Z"
+ },
+ "Adidas Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.adidas.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:21:10.985Z"
+ },
+ "City of Port Colborne": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:22:01.139Z"
+ },
+ "Calgary Board of Education": {
+  "status": "check_page",
+  "url": "https://www.cbe.ab.ca/careers",
+  "site": "https://www.cbe.ab.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:22:01.916Z"
+ },
+ "Toyota Canada Inc.": {
+  "status": "found",
+  "url": "https://toyota.wd503.myworkdayjobs.com/en-US/Toyota_CA",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:22:02.031Z"
+ },
+ "Cummins Canada": {
+  "status": "found",
+  "url": "https://fa-espx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:22:40.172Z"
+ },
+ "Vancouver Police Department": {
+  "status": "found",
+  "url": "https://jobs.vancouver.ca/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:22:53.164Z"
+ },
+ "York Region Transit": {
+  "status": "check_page",
+  "url": "https://www.yrt.ca/en/about-us/careers.aspx",
+  "site": "https://www.yrt.ca/en/index.aspx",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:23:03.555Z"
+ },
+ "Ontario Northland": {
+  "status": "found",
+  "url": "https://ontarionorthland.ca/fr/entreprise/lentreprise-avec-qui-sengage-long-terme",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:23:06.228Z"
+ },
+ "BC Lottery Corporation (BCLC)": {
+  "status": "found",
+  "url": "https://careers.bclc.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:23:11.371Z"
+ },
+ "Kriska Transportation": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:05.045Z"
+ },
+ "Town of Oakville": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:05.307Z"
+ },
+ "Town of Milton": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:05.714Z"
+ },
+ "Montreal Heart Institute": {
+  "status": "check_page",
+  "url": "https://icm-mhi.org/carrieres/",
+  "site": "https://www.icm-mhi.org/en",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:24:13.848Z"
+ },
+ "Ville de Lévis": {
+  "status": "check_page",
+  "url": "https://levis.ca/fr/ville/decouvrir-levis/carrieres",
+  "site": "http://www.ville.levis.qc.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:24:15.808Z"
+ },
+ "City of Iqaluit": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:25:07.093Z"
+ },
+ "Kraft Heinz Canada": {
+  "status": "check_page",
+  "url": "https://careers.kraftheinzcompany.com/",
+  "site": "https://www.kraftheinzcompany.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:25:12.552Z"
+ },
+ "Windsor Regional Hospital": {
+  "status": "check_page",
+  "url": "https://www.wrh.on.ca/Careers",
+  "site": "http://www.wrh.on.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:25:13.838Z"
+ },
+ "Trillium Health Partners": {
+  "status": "found",
+  "url": "https://iadyup.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:25:15.373Z"
+ },
+ "City of Winnipeg": {
+  "status": "check_page",
+  "url": "https://careers.winnipeg.ca/psc/cgext/?cmd=login&errorPg=ckreq&languageCd=ENG",
+  "site": "https://winnipeg.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:25:17.744Z"
+ },
+ "Welch LLP": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:26:01.735Z"
+ },
+ "Nexapp": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:26:01.896Z"
+ },
+ "WCB Manitoba": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:26:02.049Z"
+ },
+ "Emerson Canada": {
+  "status": "found",
+  "url": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:27:02.872Z"
+ },
+ "NWT Health and Social Services Authority": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:03.323Z"
+ },
+ "Perseus Group": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:03.377Z"
+ },
+ "Bench Accounting": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:03.609Z"
+ },
+ "Retraite Québec": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:03.621Z"
+ },
+ "Toronto Public Library": {
+  "status": "check_page",
+  "url": "https://tpl.ca/about-the-library/jobs/",
+  "site": "https://www.torontopubliclibrary.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:27:11.456Z"
+ },
+ "Bird Construction": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:05.495Z"
+ },
+ "G Mining Ventures": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:06.176Z"
+ },
+ "ManpowerGroup Canada": {
+  "status": "check_page",
+  "url": "https://www.manpowergroup.com/en/careers",
+  "site": "https://www.manpowergroup.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:28:10.844Z"
+ },
+ "Canadian Utilities": {
+  "status": "check_page",
+  "url": "https://www.canadianutilities.com/en-ca/about-us/careers.html",
+  "site": "http://www.canadian-utilities.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:28:12.199Z"
+ },
+ "Minto Group": {
+  "status": "found",
+  "url": "https://fa-erjt-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_3001",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:29:09.814Z"
+ },
+ "Jane Street Canada": {
+  "status": "check_page",
+  "url": "https://www.janestreet.com/join-jane-street/overview/",
+  "site": "https://www.janestreet.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:29:12.121Z"
+ },
+ "Gowling WLG": {
+  "status": "check_page",
+  "url": "https://gowlingwlg.com/en/careers",
+  "site": "https://gowlingwlg.com/en/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:29:12.983Z"
+ },
+ "Lithium Americas": {
+  "status": "found",
+  "url": "https://lithiumamericas.wd108.myworkdayjobs.com/External_Careers_SG",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:30:02.545Z"
+ },
+ "Carleton University": {
+  "status": "found",
+  "url": "https://carleton.ca/career/job-search/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:30:04.395Z"
+ },
+ "Pomerleau": {
+  "status": "found",
+  "url": "https://jobs.pomerleau.ca/en_US/Jobs",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:30:09.692Z"
+ },
+ "Destination Canada": {
+  "status": "found",
+  "url": "https://job-boards.greenhouse.io/destinationcanada",
+  "via": "job board found from the company name",
+  "checked": "2026-11-15T20:30:43.022Z"
+ },
+ "GHD": {
+  "status": "found",
+  "url": "https://careers.wella.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:31:00.611Z"
+ },
+ "Sutherland CloudSource": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:31:03.473Z"
+ },
+ "Taseko Mines": {
+  "status": "check_page",
+  "url": "https://www.trekormetals.com/careers/",
+  "site": "http://www.tasekomines.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:31:06.867Z"
+ },
+ "ARC Resources": {
+  "status": "found",
+  "url": "https://careers.arcresources.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:31:08.394Z"
+ },
+ "5N Plus": {
+  "status": "check_page",
+  "url": "https://www.5nplus.com/en/career/",
+  "site": "https://www.5nplus.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:31:09.999Z"
+ },
+ "Assiniboine College": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:32:06.018Z"
+ },
+ "Concordia University of Edmonton": {
+  "status": "found",
+  "url": "https://concordia.ab.ca/about/careers/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:32:06.460Z"
+ },
+ "St. Clair College": {
+  "status": "check_page",
+  "url": "https://www.stclaircollege.ca/careers",
+  "site": "http://www.stclaircollege.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:32:06.680Z"
+ },
+ "Mount Saint Vincent University": {
+  "status": "check_page",
+  "url": "https://www.msvu.ca/about-msvu/careers-at-the-mount/current-openings/",
+  "site": "http://www.msvu.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:32:09.155Z"
+ },
+ "X-Team": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.ngsdev.com/game_xteam.html",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:32:10.242Z"
+ },
+ "Collège de Maisonneuve": {
+  "status": "check_page",
+  "url": "https://www.cmaisonneuve.qc.ca/emploi/",
+  "site": "http://www.cmaisonneuve.qc.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:33:09.136Z"
+ },
+ "Fanshawe College": {
+  "status": "check_page",
+  "url": "https://www.fanshawec.ca/students/support/employment",
+  "site": "https://www.fanshawec.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:33:09.620Z"
+ },
+ "Université de l'Ontario français": {
+  "status": "check_page",
+  "url": "https://uontario.ca/notre-universite/carriere",
+  "site": "https://uontario.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:33:13.507Z"
+ },
+ "Olds College": {
+  "status": "check_page",
+  "url": "https://oldscollege.formstack.com/forms/client_intake_form",
+  "site": "https://www.oldscollege.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:33:56.339Z"
+ },
+ "Recipe Unlimited": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.recipeunlimited.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:14:00.554Z"
+ },
+ "The Co-operators": {
+  "status": "found",
+  "url": "https://recruiting.ultipro.com/COO5000COOP/JobBoard/163383cc-cbae-4201-956e-c5e437bbfeb3",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:14:00.575Z"
+ },
+ "MNP": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:14:01.739Z"
+ },
+ "CN (Canadian National Railway)": {
+  "status": "check_page",
+  "url": "https://www.cn.ca/en/careers/",
+  "site": "https://www.cn.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:14:03.343Z"
+ },
+ "Shoppers Drug Mart": {
+  "status": "check_page",
+  "url": "https://www.shoppersdrugmart.ca/careers",
+  "site": "https://www.shoppersdrugmart.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:14:04.507Z"
+ },
+ "Nuvei": {
+  "status": "found",
+  "url": "https://apply.workable.com/nuvei",
+  "via": "job board found from the company name",
+  "checked": "2026-11-15T20:14:04.688Z"
+ },
+ "Toronto Metropolitan University": {
+  "status": "found",
+  "url": "https://www.torontomu.ca/careers/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:14:07.142Z"
+ },
+ "Corus Entertainment": {
+  "status": "found",
+  "url": "https://jobs.dayforcehcm.com/corusent/CORUS",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:14:14.725Z"
+ },
+ "OpenText": {
+  "status": "found",
+  "url": "https://careers.opentext.com/us/en",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:14:34.663Z"
+ },
+ "D-Wave Quantum": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:15:04.012Z"
+ },
+ "Bison Transport": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:15:04.221Z"
+ },
+ "SaskPower": {
+  "status": "found",
+  "url": "https://www.saskpower.com/careers",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:15:05.489Z"
+ },
+ "Government of Saskatchewan": {
+  "status": "check_page",
+  "url": "https://www.saskatchewan.ca/residents/jobs-working-and-training/careers-in-the-saskatchewan-public-service",
+  "site": "https://www.saskatchewan.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:15:09.872Z"
+ },
+ "Boston Pizza": {
+  "status": "found",
+  "url": "https://careers-bostonpizza.icims.com",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:15:13.584Z"
+ },
+ "Kinduct": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:16:05.410Z"
+ },
+ "Sunova Credit Union": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:16:05.460Z"
+ },
+ "Tru Cooperative Bank": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:16:05.494Z"
+ },
+ "University of Calgary": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.ucalgary.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:16:11.892Z"
+ },
+ "Barclays Canada": {
+  "status": "found",
+  "url": "https://barclays.wd3.myworkdayjobs.com/External_Career_Site_Barclays",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:16:22.457Z"
+ },
+ "Equitable Life of Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:06.152Z"
+ },
+ "Cormark Securities": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:17:06.356Z"
+ },
+ "Marsh Canada": {
+  "status": "check_page",
+  "url": "https://www.marshall.edu/human-resources/job-opportunities/",
+  "site": "http://www.marshall.edu/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:17:06.635Z"
+ },
+ "Molson Coors Canada": {
+  "status": "check_page",
+  "url": "https://www.molsoncoors.com/careers",
+  "site": "http://www.molsoncoors.com",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:18:07.111Z"
+ },
+ "Cascades": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://amtrakcascades.com",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:18:08.412Z"
+ },
+ "General Mills Canada": {
+  "status": "found",
+  "url": "https://genmills.wd1.myworkdayjobs.com/GMI_External_Careers",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:18:19.045Z"
+ },
+ "IG Wealth Management": {
+  "status": "found",
+  "url": "https://www.ig.ca/en/careers",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:19:12.711Z"
+ },
+ "Stelco": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://stelco.com",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:19:54.637Z"
+ },
+ "Golf Town": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.golftown.com/en-CA/homepage",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:19:54.684Z"
+ },
+ "Cooke Aquaculture": {
+  "status": "check_page",
+  "url": "https://cookeseafood.com/contact/careers/",
+  "site": "http://www.cookeaqua.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:19:59.653Z"
+ },
+ "Challenger Motor Freight": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:20:00.519Z"
+ },
+ "FortisAlberta": {
+  "status": "found",
+  "url": "https://careers.fortisalberta.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:20:01.799Z"
+ },
+ "Halifax International Airport Authority": {
+  "status": "found",
+  "url": "https://fa-epec-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:20:03.798Z"
+ },
+ "Premier Tech": {
+  "status": "check_page",
+  "url": "https://www.premiertech.com/fr/emplois",
+  "site": "https://www.premiertech.com/fr/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:20:04.806Z"
+ },
+ "Extendicare": {
+  "status": "found",
+  "url": "https://extendicare.wd10.myworkdayjobs.com/Paramed2023",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:20:12.588Z"
+ },
+ "Ericsson Canada": {
+  "status": "found",
+  "url": "https://jobs.ericsson.com/careers?start=0&pid=563121777600931&sort_by=hot",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:21:00.522Z"
+ },
+ "Lallemand": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:21:01.382Z"
+ },
+ "Laurentis Energy Partners": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:21:01.572Z"
+ },
+ "Peterborough Regional Health Centre": {
+  "status": "found",
+  "url": "https://prhc.wd10.myworkdayjobs.com/PRHC",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:21:02.703Z"
+ },
+ "Boeing Canada": {
+  "status": "found",
+  "url": "https://boeing.wd1.myworkdayjobs.com/en-US/EXTERNAL_CAREERS",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:21:39.620Z"
+ },
+ "Ville de Trois-Rivières": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:22:01.941Z"
+ },
+ "Ontario Lottery and Gaming (OLG)": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:22:02.196Z"
+ },
+ "District of Saanich": {
+  "status": "found",
+  "url": "https://www.saanich.ca/EN/main/local-government/careers-at-saanich/current-employment-opportunities.html",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:22:03.477Z"
+ },
+ "Regional Municipality of Wood Buffalo": {
+  "status": "found",
+  "url": "https://jobs.rmwb.ca/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:22:07.793Z"
+ },
+ "Santé Québec": {
+  "status": "check_page",
+  "url": "https://sante.quebec/carrieres/",
+  "site": "https://sante.quebec/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:23:06.714Z"
+ },
+ "Nova Scotia Liquor Corporation": {
+  "status": "found",
+  "url": "https://careers.mynslc.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:23:51.706Z"
+ },
+ "John Deere Canada": {
+  "status": "found",
+  "url": "https://jobs.deere.com/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:23:53.472Z"
+ },
+ "Efficiency Manitoba": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:24:03.632Z"
+ },
+ "Bluewater Health": {
+  "status": "found",
+  "url": "https://bluewaterhealth.ca/careers-and-volunteering/employment-opportunities/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:24:05.594Z"
+ },
+ "William Osler Health System": {
+  "status": "check_page",
+  "url": "https://oslerfoundation.org/careers/",
+  "site": "https://oslerfoundation.org",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:24:09.835Z"
+ },
+ "Calgary Police Service": {
+  "status": "found",
+  "url": "https://www.calgary.ca/careers.html",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:24:43.521Z"
+ },
+ "Procom": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:25:04.922Z"
+ },
+ "City of Kingston": {
+  "status": "found",
+  "url": "https://www.cityofkingston.ca/careers-and-volunteering/student-opportunities/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:25:05.524Z"
+ },
+ "Town of Caledon": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.caledon.ca/en/townhall/walk-of-fame.asp",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:25:08.777Z"
+ },
+ "Slalom Canada": {
+  "status": "check_page",
+  "url": "https://www.slalom.com/us/en/careers",
+  "site": "http://www.slalom.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:25:11.530Z"
+ },
+ "Vela Software": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:26:05.773Z"
+ },
+ "Bennett Jones": {
+  "status": "found",
+  "url": "https://www.bennettjones.com/Careers",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:26:07.949Z"
+ },
+ "Tetra Tech Canada": {
+  "status": "check_page",
+  "url": "https://www.tetratech.com/careers/",
+  "site": "http://www.tetratech.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:26:10.487Z"
+ },
+ "Osler, Hoskin & Harcourt": {
+  "status": "check_page",
+  "url": "https://www.osler.com/en/careers/",
+  "site": "https://www.osler.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:26:13.652Z"
+ },
+ "AbraSilver Resource": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:06.355Z"
+ },
+ "Léger": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:27:06.617Z"
+ },
+ "DBRS Morningstar": {
+  "status": "found",
+  "url": "https://morningstar.wd5.myworkdayjobs.com/MorningstarDBRS",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:27:08.806Z"
+ },
+ "Microchip Technology Canada": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://www.microchip.com/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:27:08.878Z"
+ },
+ "Ontario Trillium Foundation": {
+  "status": "check_page",
+  "url": "https://otf.ca/who-we-are/work-ontario-trillium-foundation",
+  "site": "http://www.otf.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:27:09.842Z"
+ },
+ "Equinox Gold": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:06.957Z"
+ },
+ "PrairieSky Royalty": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:06.968Z"
+ },
+ "TerraVest Industries": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:07.050Z"
+ },
+ "International Petroleum Corp": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:28:07.372Z"
+ },
+ "Lundin Gold": {
+  "status": "check_page",
+  "url": "https://lundingold.com/careers/available-positions/",
+  "site": "https://lundingold.com/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:28:11.681Z"
+ },
+ "ArcelorMittal Dofasco": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:07.938Z"
+ },
+ "Skeena Resources": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:29:08.214Z"
+ },
+ "Universities Canada": {
+  "status": "check_page",
+  "url": "https://univcan.ca/about-universities-canada/careers/",
+  "site": "https://univcan.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:29:09.070Z"
+ },
+ "Halifax Regional Municipality": {
+  "status": "check_page",
+  "url": "https://www.halifax.ca/about-halifax/employment",
+  "site": "https://www.halifax.ca",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:29:09.218Z"
+ },
+ "Finning": {
+  "status": "found",
+  "url": "https://finning.wd3.myworkdayjobs.com/External",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:29:21.117Z"
+ },
+ "Windsor-Detroit Bridge Authority": {
+  "status": "not_found",
+  "url": "",
+  "site": "https://pontinternationalgordiehowe.com/entreprise/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:30:05.215Z"
+ },
+ "Canada Development Investment Corporation": {
+  "status": "check_page",
+  "url": "https://cdev.gc.ca/work-with-us/",
+  "site": "https://www.cdev.gc.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:30:05.472Z"
+ },
+ "Brandon University": {
+  "status": "found",
+  "url": "https://www.brandonu.ca/careerplanning/student-resources/job-search-links/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:30:36.751Z"
+ },
+ "Thompson Rivers University": {
+  "status": "check_page",
+  "url": "https://www.tru.ca/careers.html",
+  "site": "https://www.tru.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:30:51.103Z"
+ },
+ "Aris Mining": {
+  "status": "not_found",
+  "url": "",
+  "site": "",
+  "note": "Official website not found - add a careers link",
+  "checked": "2026-11-15T20:31:02.044Z"
+ },
+ "Red Deer Polytechnic": {
+  "status": "found",
+  "url": "https://jobs.glowinthecloud.com/rd-polytech?l=en",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:31:03.619Z"
+ },
+ "University of Guelph": {
+  "status": "found",
+  "url": "https://careers.uoguelph.ca/services/rss/job/?locale=en_US&keywords=",
+  "via": "job board found from the website",
+  "checked": "2026-11-15T20:31:04.959Z"
+ },
+ "St. Lawrence College": {
+  "status": "found",
+  "url": "https://www.stlawrencecollege.ca/about/careers-at-slc/current-job-opportunities",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:31:05.124Z"
+ },
+ "Infinite Red": {
+  "status": "check_page",
+  "url": "https://infinite.red/contact",
+  "site": "https://infinite.red/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:31:05.413Z"
+ },
+ "Université du Québec à Chicoutimi": {
+  "status": "not_found",
+  "url": "",
+  "site": "http://www.uqac.ca/",
+  "note": "Careers page not found on the website - add a careers link",
+  "checked": "2026-11-15T20:32:06.492Z"
+ },
+ "Redeemer University": {
+  "status": "found",
+  "url": "https://www.redeemer.ca/academics/experiential-learning/career-centre/",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:32:06.874Z"
+ },
+ "Red River College Polytechnic": {
+  "status": "check_page",
+  "url": "https://www.rrc.ca/hr/work/employment-opportunities/",
+  "site": "https://www.rrc.ca/",
+  "note": "Careers page found, but its job list could not be read - add the direct job-list link",
+  "checked": "2026-11-15T20:32:07.913Z"
+ },
+ "Fleming College": {
+  "status": "found",
+  "url": "https://flemingcollege.ca/about-fleming/careers-at-fleming",
+  "via": "careers page found from the website",
+  "checked": "2026-11-15T20:32:13.440Z"
+ }
+}
