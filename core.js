@@ -45,15 +45,30 @@ export function provinceOf(location) {
 }
 
 // True if a posting is in Canada or open to people in Canada. Blank / "3 Locations" -> true (can't tell).
-export function isCanada(location) {
-  const loc = String(location || '').trim();
-  if (!loc || /\d+\s+locations?/i.test(loc)) return true;
+// US places that share names with Canadian ones ("New Brunswick, NJ", "Ontario, CA", "Vancouver, WA", "Waterloo, Iowa").
+const US_STATE_NAME_RE = /\b(alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|georgia|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|new york|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington|west virginia|wisconsin|wyoming|district of columbia)\b/i;
+const US_STATE_ABBR_END_RE = /,\s*(AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY|DC)\.?\s*(\d{5}(-\d{4})?)?\s*$/;
+const OTHER_COUNTRY_RE = /\b(bermuda|jamaica|bahamas|barbados|trinidad|puerto rico|new zealand|china|hong kong|taiwan|korea|vietnam|thailand|malaysia|indonesia|south africa|nigeria|kenya|egypt|uae|united arab emirates|saudi arabia|qatar|turkey|italy|switzerland|sweden|norway|denmark|finland|belgium|austria|czech|hungary|romania|greece|colombia|chile|peru|costa rica|guatemala|pakistan|bangladesh|sri lanka)\b/i;
+
+function isCanadaOne(loc) {
   const low = loc.toLowerCase();
-  if (low.includes('canada') || low.includes('canadian') || provinceOf(loc)) return true;
+  if (/\d+\s+locations?/i.test(loc)) return true;
+  if (low.includes('canada') || low.includes('canadian')) return true; // says Canada
+  if (ABBR_RE.test(loc)) return true; // "Toronto, ON", "Moncton, NB"
+  if (NOT_CANADA_RE.test(loc) || OTHER_COUNTRY_RE.test(loc) || US_STATE_NAME_RE.test(loc) || US_STATE_ABBR_END_RE.test(loc)) return false;
+  if (provinceOf(loc)) return true; // a province or Canadian city name
   if (OPEN_RE.test(loc)) return true;
-  if (low.includes('remote') && !NOT_CANADA_RE.test(loc)) return true;
+  if (low.includes('remote')) return true;
   return false;
 }
+export function isCanada(location) {
+  const loc = String(location || '').trim();
+  if (!loc) return true;
+  const parts = loc.split(/\s*[/;|]\s*/).filter(Boolean); // "Toronto, ON / New York, NY"
+  return parts.length > 1 ? parts.some(isCanadaOne) : isCanadaOne(loc);
+}
+// A named Canadian place (not just "remote" or blank).
+export const isCanadianPlace = (loc) => !!String(loc || '').trim() && isCanada(loc) && (!!provinceOf(loc) || /\bcanad|^can\b/i.test(String(loc).trim()));
 
 // "ON", "BC" ... or "Remote" or "" (somewhere in Canada / not stated)
 export function regionOf(location) {
