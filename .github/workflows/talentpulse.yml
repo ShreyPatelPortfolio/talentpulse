@@ -1,0 +1,47 @@
+name: TalentPulse daily scan
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 10 * * *"
+  push:
+    paths:
+      - "employers.csv"
+      - ".github/workflows/talentpulse.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: talentpulse
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install a headless browser (for careers pages that need JavaScript)
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+        continue-on-error: true
+
+      - name: Scan every employer's career site
+        run: node scan.js
+
+      - name: Save the results
+        run: |
+          git config user.name "talentpulse-bot"
+          git config user.email "talentpulse-bot@users.noreply.github.com"
+          git add jobs.json boards-cache.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "TalentPulse scan $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git pull --rebase --autostash
+          git push
