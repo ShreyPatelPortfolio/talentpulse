@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TalentPulse — analyst openings across Canada</title>
+<meta name="description" content="Upload your resume, pick your job titles, and TalentPulse checks 2,000+ Canadian employers' career sites for matching new-grad and entry-level openings.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='1.5' y='1.5' width='29' height='29' rx='8' fill='%230E1821' stroke='%235FD0B8' stroke-width='2.5'/><path d='M5 17h5l3-7 4 13 3-9 2 3h5' fill='none' stroke='%235FD0B8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#" id="homeLink">
+    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect x="1.5" y="1.5" width="29" height="29" rx="8" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M5 17h5l3-7 4 13 3-9 2 3h5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span><b>TalentPulse</b><small>analyst openings across Canada</small></span>
+  </a>
+  <nav class="steps" id="stepNav">
+    <button data-go="resume"><i>1</i>Resume</button>
+    <button data-go="titles"><i>2</i>Job titles</button>
+    <button data-go="results"><i>3</i>Openings</button>
+    <button data-go="employers" class="ghost-tab">Employers</button>
+  </nav>
+  <div class="scan-info" id="scanInfo">Loading…</div>
+</header>
+
+<main>
+  <section class="setup" id="setup" hidden></section>
+  <!-- ============ STEP 1: RESUME ============ -->
+  <section class="view" id="view-resume">
+    <div class="hero">
+      <h1>Find openings that fit you,<br><em>across <span id="heroEmployers">2,000+</span> Canadian employers.</em></h1>
+      <p class="lead">Upload your resume, choose the job titles you want, and TalentPulse checks every employer's career site for matching openings — with level, location, posting date and a direct link to apply.</p>
+      <div class="hero-stats" id="heroStats"></div>
+    </div>
+    <div class="card upload-card">
+      <label class="drop" id="drop">
+        <input type="file" id="resumeFile" accept=".pdf,.docx,.txt" hidden>
+        <div class="drop-icon"><svg viewBox="0 0 48 48" width="46" height="46" aria-hidden="true"><path d="M14 6h14l10 10v24a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M28 6v10h10" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M24 34V22m0 0-5 5m5-5 5 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <b id="dropTitle">Drop your resume here, or click to choose</b>
+        <span id="dropSub">PDF, Word (.docx) or text · read in your browser, never uploaded</span>
+      </label>
+      <div class="resume-summary" id="resumeSummary" hidden>
+        <div class="rs-head"><span class="file-pill" id="resumeName"></span><button class="link" id="removeResume">Remove</button></div>
+        <div class="rs-grid">
+          <div><h4>Titles from your list that appear in your resume</h4><div class="chips" id="resumeTitles"></div></div>
+          <div><h4>Skills we spotted</h4><div class="chips" id="resumeSkills"></div></div>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn link-btn" id="skipResume">Skip — just pick titles</button>
+        <button class="btn primary" id="toTitles" disabled>Next: choose job titles →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STEP 2: TITLES & FILTERS ============ -->
+  <section class="view" id="view-titles" hidden>
+    <div class="view-head">
+      <div><h2>Which jobs are you after?</h2><p class="muted">Pick titles from your list, or add your own. A posting matches when its title has all the words of a line, in any order — “Data Analyst” also finds “Senior Data Analyst, Risk”.</p></div>
+      <div class="sel-count"><b id="selCount">0</b><span>titles selected</span></div>
+    </div>
+    <div class="titles-layout">
+      <div class="card">
+        <div class="title-tools">
+          <input type="text" id="newTitle" placeholder="Add a title (e.g. Pricing Analyst) and press Enter">
+          <button class="btn" id="addTitle">Add</button>
+          <span class="spacer"></span>
+          <button class="btn ghost sm" id="selResume" hidden>★ Resume matches only</button>
+          <button class="btn ghost sm" id="selAll">Select all</button>
+          <button class="btn ghost sm" id="selNone">Clear</button>
+          <button class="btn ghost sm" id="editList">Edit / paste list</button>
+        </div>
+        <div id="listEditor" hidden>
+          <textarea id="listText" rows="12" spellcheck="false"></textarea>
+          <div class="row"><button class="btn primary sm" id="saveList">Save list</button><button class="btn ghost sm" id="cancelList">Cancel</button><button class="link" id="resetList">Reset to the starter list</button><span class="muted small">Lines starting with # are category headings.</span></div>
+        </div>
+        <div id="titleGroups"></div>
+      </div>
+      <aside class="card filters-card">
+        <h3>Experience</h3>
+        <div class="level-toggles" id="levelToggles"></div>
+        <label class="slider-row">Hide postings asking for more than <b id="maxYearsVal">2</b> years
+          <input type="range" id="maxYears" min="0" max="10" value="2"></label>
+        <h3>Where</h3>
+        <div class="prov-pick" id="provPick"></div>
+        <h3>Ignore titles containing</h3>
+        <input type="text" id="excludeWords" placeholder="e.g. contract, part-time, french">
+        <button class="btn primary big" id="runSearch">Search <span id="runEmployers">2,000+</span> employers →</button>
+        <p class="muted small" id="dataAge"></p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ SEARCH ANIMATION ============ -->
+  <section class="view" id="view-searching" hidden>
+    <div class="searching">
+      <div class="radar"><span></span><span></span><span></span><svg viewBox="0 0 32 32" width="56" height="56" aria-hidden="true"><rect x="1.5" y="1.5" width="29" height="29" rx="8" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M5 17h5l3-7 4 13 3-9 2 3h5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h2>Checking career sites…</h2>
+      <div class="sbar"><i id="sProg"></i></div>
+      <div class="s-stats"><div><b id="sEmp">0</b><span>employers checked</span></div><div><b id="sJobs">0</b><span>openings read</span></div><div><b id="sHits" class="teal">0</b><span>match your titles</span></div></div>
+      <div class="ticker" id="sTicker"></div>
+    </div>
+  </section>
+
+  <!-- ============ RESULTS ============ -->
+  <section class="view" id="view-results" hidden>
+    <div class="kpis" id="kpis"></div>
+    <div class="viz">
+      <div class="card"><h3>Where the jobs are <small>click a province to filter</small></h3><div id="map"></div></div>
+      <div class="card"><h3>By level</h3><div id="levelChart"></div></div>
+      <div class="card"><h3>Top employers hiring</h3><div id="empChart"></div></div>
+      <div class="card"><h3>Posted in the last 30 days</h3><div id="timeChart"></div><h3 class="mt">By category</h3><div id="catChart"></div></div>
+    </div>
+    <div class="card results-card">
+      <div class="res-tools">
+        <input type="search" id="q" placeholder="Search title, employer, city…">
+        <div class="seg" id="sortSeg"><button data-sort="new" class="on">Newest</button><button data-sort="level">Best level</button><button data-sort="employer">Employer</button></div>
+        <label class="check"><input type="checkbox" id="newOnly"> New this week</label>
+        <span class="active-filters" id="activeFilters"></span>
+        <span class="spacer"></span>
+        <button class="btn ghost sm" id="exportCsv">Export CSV</button>
+        <button class="btn ghost sm" id="editSearch">Change titles / filters</button>
+      </div>
+      <div id="resultList" class="result-list"></div>
+      <div id="resultEmpty" class="empty" hidden></div>
+      <div class="row center"><button class="btn ghost" id="more" hidden>Show more</button></div>
+    </div>
+  </section>
+
+  <!-- ============ EMPLOYERS ============ -->
+  <section class="view" id="view-employers" hidden>
+    <div class="view-head">
+      <div><h2>Employers being watched</h2><p class="muted">From <code>employers.csv</code>. Employers without a link are looked up automatically (official website → careers page → job board). To add an employer or fix a link, edit that file in Excel or Notepad and upload it again — the next scan picks it up. A direct job-board link (Workday, Greenhouse, Lever, Ashby, SmartRecruiters, Workable, SuccessFactors) works best.</p></div>
+    </div>
+    <div class="kpis small" id="empKpis"></div>
+    <div class="card">
+      <div class="res-tools">
+        <input type="search" id="eq" placeholder="Search employers, city, industry…">
+        <select id="eStatus"><option value="">All statuses</option><option value="ok">Job board read</option><option value="not_found">Needs a careers link</option><option value="check_page">Page shows no jobs</option><option value="error">Couldn't load</option><option value="unscanned">Not scanned yet</option></select>
+        <select id="eProv"></select>
+        <span class="muted small" id="eCount"></span>
+      </div>
+      <div class="table-wrap"><table class="emp-table"><thead><tr><th>Employer</th><th>Where</th><th>Industry</th><th>Status</th><th>Openings in Canada</th><th>Match you</th></tr></thead><tbody id="eBody"></tbody></table></div>
+      <div class="row center"><button class="btn ghost" id="eMore" hidden>Show more</button></div>
+    </div>
+  </section>
+</main>
+<footer class="foot">TalentPulse · your resume and titles stay in this browser · openings come from the daily scan of each employer's career site</footer>
+<script src="mammoth.browser.min.js" defer></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

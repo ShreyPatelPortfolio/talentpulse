@@ -1,0 +1,128 @@
+# TalentPulse - starter job titles. The website loads this list the first time; after that you edit titles on the website.
+# Lines starting with # are category headings. A posting matches when its title contains ALL the words of a line, in any order.
+
+# Data & Analytics
+Data Analyst
+BI Analyst
+Reporting Analyst
+Data Visualization Specialist
+Decision Support Analyst
+Insights Analyst
+Metrics Analyst
+Dashboard Analyst
+Data Quality Analyst
+Data Governance Analyst
+Performance Analyst
+Business Intelligence Developer
+Analytics Consultant
+
+# Business & Operations
+Business Analyst
+Business Process Analyst
+Process Improvement Specialist
+Process Analyst
+Operations Analyst
+Continuous Improvement Analyst
+Operational Excellence Analyst
+Strategy Analyst
+Change Management Analyst
+Enterprise Analyst
+Performance Improvement Specialist
+Project Coordinator
+
+# Finance & Risk
+Financial Analyst
+Revenue Analyst
+Pricing Analyst
+Risk Analyst
+Credit Analyst
+Commercial Analyst
+Investment Operations Analyst
+Fraud Analyst
+Cost Analyst
+Budget Analyst
+Forecast Analyst
+
+# Marketing & Customer
+Marketing Analyst
+Customer Insights Analyst
+CRM Analyst
+Consumer Insights Analyst
+Digital Marketing Analyst
+Web Analytics Specialist
+Campaign Analyst
+Customer Success Analyst
+Growth Analyst
+Loyalty Analyst
+
+# Supply Chain & Logistics
+Supply Chain Analyst
+Logistics Analyst
+Inventory Analyst
+Demand Planner
+Procurement Analyst
+Production Planner
+Capacity Planning Analyst
+Purchasing Analyst
+Transportation Analyst
+Operations Specialist
+
+# Technology & Product
+Product Analyst
+Product Operations Analyst
+Business Systems Analyst
+Systems Analyst
+Solutions Specialist
+Implementation Specialist
+Functional Analyst
+Application Support Analyst
+ERP Analyst
+BI Developer
+Data Engineer
+Technical Business Analyst
+
+# Healthcare
+Healthcare Data Analyst
+Clinical Data Analyst
+Health Information Analyst
+Quality Improvement Analyst
+Population Health Analyst
+Health Systems Analyst
+Care Analytics Specialist
+
+# Government & Non-Profit
+Research Analyst
+Policy Analyst
+Program Evaluation Analyst
+Performance Measurement Analyst
+Planning Analyst
+Strategic Planning Analyst
+Intelligence Analyst
+Administrative Analyst
+
+# Keyword combinations
+Business Intelligence AND Specialist
+Operations AND Coordinator
+Process Improvement AND Coordinator
+Customer Insights AND Specialist
+Data AND Coordinator
+Reporting AND Specialist
+Analytics AND Associate
+Business AND Consultant
+
+# New grad programs
+Graduate Program
+New Grad Analyst
+New Graduate Analyst
+Graduate Analyst
+Rotational Program
+Development Program
+Leadership Development Program
+Analyst Program
+Associate Program
+Early Career Analyst
+Entry Level Analyst
+Junior Analyst
+Associate Analyst
+Analyst I
+Campus Analyst
