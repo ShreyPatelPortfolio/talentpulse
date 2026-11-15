@@ -24,7 +24,8 @@ const TIME_BUDGET_MS = Number(process.env.TALENTPULSE_BUDGET_MIN || 270) * 60000
 const HARD_STOP_MS = Number(process.env.TALENTPULSE_HARD_STOP_MIN || 305) * 60000;   // save whatever is done and finish, no matter what
 const EMPLOYER_LIMIT_MS = Number(process.env.TALENTPULSE_EMPLOYER_MIN || 8) * 60000; // one employer may take at most this long
 const STARTED = Date.now();
-const WIKI_UA = 'TalentPulse/1.0 (personal job-search tool run on GitHub Actions)';
+// Wikimedia's User-Agent policy asks for a contact URL or email; the repository URL is the contact.
+const WIKI_UA = `TalentPulse/1.1 (https://github.com/${process.env.GITHUB_REPOSITORY || 'ShreyPatelPortfolio/talentpulse'}; job-search tool) Node.js/${process.versions.node}`;
 const MAX_LISTINGS = 2500;
 const WORKERS = Number(process.env.TALENTPULSE_WORKERS || 12);
 const RETRY_NOT_FOUND_DAYS = 7;
@@ -35,18 +36,38 @@ const partIdx = args.indexOf('--part');
 const PART = partIdx >= 0 ? (String(args[partIdx + 1] || '').match(/^(\d+)\/(\d+)$/) || []).slice(1).map(Number) : null; // [n, of]
 const MERGE = args.includes('--merge');
 if (partIdx >= 0 && !(PART?.length === 2 && PART[0] >= 1 && PART[0] <= PART[1])) { console.error('Use --part N/M, for example --part 3/10'); process.exit(1); }
-const WIKI_SLOTS = Number(process.env.TALENTPULSE_WIKI_SLOTS || (PART ? 2 : 4)); // 10 parts at once share Wikidata politely
+const WIKI_SLOTS = Number(process.env.TALENTPULSE_WIKI_SLOTS || 1); // one lookup at a time (Wikimedia asks for 3 or fewer)
+// Wikimedia allows anonymous tools a few hundred lookups an hour, so each scan uses only a share and the rest wait for the next scan.
+const WIKI_MAX = Number(process.env.TALENTPULSE_WIKI_MAX || (PART ? 120 : 450));
 
 // ---------------- HTTP helpers ----------------
+// At most a few requests to the same website at once, and wait/retry when a site says "too many requests".
+const hostBusy = new Map();
+const HOST_SLOTS = Number(process.env.TALENTPULSE_HOST_SLOTS || 4);
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 async function http(url, opts = {}) {
-  const res = await fetch(url, {
-    redirect: 'follow',
-    signal: AbortSignal.timeout(opts.timeout || 25000),
-    ...opts,
-    headers: { 'User-Agent': UA, 'Accept-Language': 'en-CA,en;q=0.9', ...(opts.headers || {}) },
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
-  return res;
+  let host = '';
+  try { host = new URL(url).hostname; } catch { /* checked below */ }
+  if (!host || !/^https?:/i.test(String(url))) throw new Error(`Not a web address: ${String(url).slice(0, 80)}`);
+  while ((hostBusy.get(host) || 0) >= HOST_SLOTS) await sleep(50);
+  hostBusy.set(host, (hostBusy.get(host) || 0) + 1);
+  try {
+    for (let attempt = 0; ; attempt++) {
+      const res = await fetch(url, {
+        redirect: 'follow',
+        signal: AbortSignal.timeout(opts.timeout || 25000),
+        ...opts,
+        headers: { 'User-Agent': UA, 'Accept-Language': 'en-CA,en;q=0.9', ...(opts.headers || {}) },
+      });
+      if (res.status === 429 && attempt < 3) {
+        try { await res.body?.cancel(); } catch { /* ignore */ }
+        await sleep(1000 * Math.min(20, Number(res.headers.get('retry-after')) || 3 * (attempt + 1)));
+        continue;
+      }
+      if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+      return res;
+    }
+  } finally { hostBusy.set(host, hostBusy.get(host) - 1); }
 }
 const getJSON = async (url, opts) => (await http(url, { ...opts, headers: { Accept: 'application/json', ...(opts?.headers || {}) } })).json();
 const postJSON = (url, body) => getJSON(url, { method: 'POST', body: JSON.stringify(body), headers: { 'Content-Type': 'application/json' } });
@@ -132,7 +153,9 @@ async function renderPage(url) {
     const frames = page.frames();
     let html = '';
     for (const f of frames) { try { html += `\n<!-- frame ${f.url()} -->\n` + await f.content(); } catch { /* cross-origin */ } }
-    return { html, finalUrl: page.url() };
+    const finalUrl = page.url();
+    if (!/^https?:/i.test(finalUrl)) return null; // the page failed to load (e.g. chrome-error://)
+    return { html, finalUrl };
   } finally { openPages--; await page.close().catch(() => {}); }
 }
 let openPages = 0;
@@ -150,12 +173,12 @@ export function detectAts(rawUrl) {
   if (host === 'jobs.ashbyhq.com' && parts[0]) return { type: 'ashby', slug: parts[0] };
   if (/smartrecruiters\.com$/.test(host) && parts[0]) return { type: 'smartrecruiters', slug: parts[0] };
   if (/myworkdayjobs\.com$|myworkdaysite\.com$/.test(host)) {
-    const rest = parts.filter((p) => !/^[a-z]{2}-[A-Z]{2}$/.test(p) && p !== 'recruiting');
+    const rest = parts.filter((p) => !/^[a-z]{2}-[a-z]{2}$/i.test(p) && p !== 'recruiting');
     const tenant = host.split('.')[0];
     if (host.includes('myworkdaysite')) return { type: 'workday', host, tenant: rest[0], site: rest[1] };
     if (rest[0]) return { type: 'workday', host, tenant, site: rest[0] };
   }
-  if (host === 'apply.workable.com' && parts[0]) return { type: 'workable', slug: parts[0] };
+  if (host === 'apply.workable.com' && parts[0] && parts[0] !== 'j') return { type: 'workable', slug: parts[0] };
   if (/\.recruitee\.com$/.test(host)) return { type: 'recruitee', slug: host.split('.')[0] };
   if (/\.bamboohr\.com$/.test(host)) return { type: 'bamboohr', slug: host.split('.')[0] };
   if (/icims\.com$/.test(host)) return { type: 'icims', origin: u.origin };
@@ -175,8 +198,8 @@ const EMBED_PATTERNS = [
   /https?:\/\/(?:boards|job-boards)(?:\.eu)?\.greenhouse\.io\/(?:embed\/job_board\?for=)?[A-Za-z0-9_-]+/,
   /https?:\/\/jobs(?:\.eu)?\.lever\.co\/[A-Za-z0-9_.-]+/,
   /https?:\/\/jobs\.ashbyhq\.com\/[A-Za-z0-9_.%-]+/,
-  /https?:\/\/[a-z0-9-]+\.wd\d+\.myworkdayjobs\.com\/(?:[a-z]{2}-[A-Z]{2}\/)?[A-Za-z0-9_-]+/,
-  /https?:\/\/apply\.workable\.com\/[A-Za-z0-9_-]+/,
+  /https?:\/\/[a-z0-9-]+\.wd\d+\.myworkdayjobs\.com\/(?:[a-zA-Z]{2}-[a-zA-Z]{2}\/)?[A-Za-z0-9_-]+/,
+  /https?:\/\/apply\.workable\.com\/(?!j\/)[A-Za-z0-9_-]+/,
   /https?:\/\/(?:jobs|careers)\.smartrecruiters\.com\/[A-Za-z0-9_-]+/,
   /https?:\/\/[a-z0-9-]+\.recruitee\.com/,
   /https?:\/\/[a-z0-9-]+\.bamboohr\.com\/(?:careers|jobs)/,
@@ -482,16 +505,34 @@ function nameVariants(name) {
   return [...new Set(out)];
 }
 const CA_DESC = /canad|ontario|qu[eé]bec|british columbia|alberta|manitoba|saskatchewan|nova scotia|new brunswick|newfoundland|toronto|montr[eé]al|vancouver|calgary|ottawa/i;
-// Wikidata asks callers to go easy: at most 4 lookups at a time, and wait/retry when it says "busy".
-let wikiBusy = 0;
+// Wikidata (run by Wikimedia) limits how often anonymous tools may ask. We ask one at a time, at most WIKI_MAX times
+// per scan, and when it says "too many requests" we stop asking for the rest of this scan.
+class WikiPaused extends Error {}
+let wikiBusy = 0, wikiUsed = 0, wikiPaused = false, wikiLast = 0;
+const wikiStats = { used: 0, paused: '' };
 async function wikiGet(url) {
-  while (wikiBusy >= WIKI_SLOTS) await new Promise((r) => setTimeout(r, 100));
+  while (wikiBusy >= WIKI_SLOTS) await sleep(100);
   wikiBusy++;
   try {
     for (let attempt = 0; ; attempt++) {
-      const res = await fetch(url, { headers: { 'User-Agent': WIKI_UA, Accept: 'application/json' }, signal: AbortSignal.timeout(25000) });
+      if (wikiPaused) throw new WikiPaused('Wikidata asked us to slow down');
+      if (wikiUsed >= WIKI_MAX) { wikiPaused = true; wikiStats.paused ||= `used this scan's ${WIKI_MAX} lookups`; throw new WikiPaused('lookup limit for this scan reached'); }
+      const gap = 500 - (Date.now() - wikiLast);
+      if (gap > 0) await sleep(gap);
+      wikiLast = Date.now(); wikiUsed++; wikiStats.used = wikiUsed;
+      let res;
+      try { res = await fetch(url, { headers: { 'User-Agent': WIKI_UA, 'Api-User-Agent': WIKI_UA, Accept: 'application/json' }, signal: AbortSignal.timeout(25000) }); }
+      catch (e) { if (attempt < 1) { await sleep(2000); continue; } throw new Error(`Wikidata lookup failed (${e.message}) - will retry next scan`); }
       if (res.ok) return await res.json();
-      if ((res.status === 429 || res.status >= 500) && attempt < 4) { await new Promise((r) => setTimeout(r, 2000 * (attempt + 1))); continue; }
+      try { await res.body?.cancel(); } catch { /* ignore */ }
+      const ra = Number(res.headers.get('retry-after'));
+      const wait = Number.isFinite(ra) && ra >= 0 ? ra : 5 * 2 ** attempt;
+      if (res.status === 429) {
+        if (wait <= 30 && attempt < 2) { await sleep(1000 * wait + Math.random() * 500); continue; }
+        wikiPaused = true; wikiStats.paused ||= `Wikidata said "too many requests" after ${wikiUsed} lookups`;
+        throw new WikiPaused('Wikidata asked us to slow down');
+      }
+      if (res.status >= 500 && attempt < 2) { await sleep(1000 * Math.min(30, wait)); continue; }
       throw new Error(`Wikidata lookup failed (HTTP ${res.status}) - will retry next scan`);
     }
   } finally { wikiBusy--; }
@@ -555,10 +596,37 @@ async function inspectCareersPage(url, depth, budget = { renders: 1 }) {
   if (jobsHere >= 2) return { listing: page.finalUrl };
   return depth === 0 ? { careers: page.finalUrl } : null;
 }
-async function discoverFromWebsite(emp) {
-  const site = await officialWebsite(emp);
-  if (!site) return { status: 'not_found', note: 'Official website not found - add a careers link' };
-  const home = (await getHTML(site).catch(() => null)) || (await renderPage(site));
+// Try companyname.ca (or .com), accepted only if the page's own title matches the company.
+async function guessWebsite(emp, tld) {
+  const tried = new Set();
+  for (const n of nameVariants(emp.company).slice(0, 2)) {
+    const w = n.toLowerCase().replace(/&/g, ' and ').replace(CORP, ' ').match(/[a-z0-9]+/g) || [];
+    const joined = w.join(''), hyph = w.join('-');
+    if (!(w.length >= 2 || joined.length >= 7)) continue; // single short words are too ambiguous
+    for (const host of [`www.${joined}.${tld}`, `www.${hyph}.${tld}`]) {
+      if (tried.has(host)) continue;
+      tried.add(host);
+      const page = await getHTML(`https://${host}/`).catch(() => null);
+      if (!page?.html) continue;
+      const title = `${page.html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] || ''} ${page.html.match(/og:site_name["'][^>]*content=["']([^"']+)/i)?.[1] || ''}`;
+      if (similarName(n, decodeEntities(title)) || normName(decodeEntities(title)).includes(normName(n))) return page.finalUrl;
+    }
+  }
+  return null;
+}
+async function discoverFromWebsite(emp, knownSite) {
+  let site = /^https?:\/\//i.test(knownSite || '') ? knownSite : null, wikiError = null;
+  if (!site) site = await guessWebsite(emp, 'ca');
+  if (!site) { try { site = await officialWebsite(emp); } catch (e) { wikiError = e; } }
+  if (!site) site = await guessWebsite(emp, 'com');
+  if (!site) {
+    // Wikidata couldn't answer this time: check again next scan instead of giving up for a week
+    if (wikiError) return { status: 'unscanned', note: 'Website lookup is waiting its turn - it will be checked in the next scan' };
+    return { status: 'not_found', note: 'Official website not found - add a careers link' };
+  }
+  let home = await getHTML(site).catch(() => null);
+  if (!home) home = await renderPage(site);
+  if (home && !/^https?:/i.test(home.finalUrl || '')) home = null;
   const candidates = [];
   if (home?.html) {
     if (detectAts(home.finalUrl).type !== 'generic') return { url: home.finalUrl, site, via: 'job board found from the website' };
@@ -592,6 +660,7 @@ async function scanEmployer(emp, cache, previous) {
   let url = emp.careers_url;
   let note = '';
   let listings;
+  let site = known?.site || '';
   if (!url) {
     const fresh = known && Date.now() - Date.parse(known.checked || 0) < RETRY_NOT_FOUND_DAYS * 864e5;
     if (known?.status === 'found' && known.url) { url = known.url; note = known.via || ''; }
@@ -600,14 +669,15 @@ async function scanEmployer(emp, cache, previous) {
     } else {
       let found = await discoverBySlug(emp);
       if (!found) {
-        const d = await discoverFromWebsite(emp);
+        const d = await discoverFromWebsite(emp, known?.site);
+        if (d.status === 'unscanned') return { status: { status: 'unscanned', url: '', note: d.note }, jobs: [] };
         if (!d.url || d.status) {
           const entry = { status: d.status || 'not_found', url: d.url || '', site: d.site || '', note: d.note, checked: new Date().toISOString() };
           return { status: { status: entry.status, url: entry.url, note: entry.note }, jobs: [], cacheEntry: entry };
         }
         found = d;
       }
-      url = found.url; listings = found.listings; note = found.via;
+      url = found.url; listings = found.listings; note = found.via; site = found.site || site;
     }
   }
   let ats = detectAts(url);
@@ -628,7 +698,11 @@ async function scanEmployer(emp, cache, previous) {
     if (Date.now() - started > 240000) return; // enough time spent on this employer's details
     const d = await l.detail();
     if (typeof d === 'string') l.description = d;
-    else if (d) { l.description = d.description; l.location ||= d.location; l.posted = l.posted || d.posted; }
+    else if (d) {
+      l.description = d.description;
+      if (d.location && (!l.location || /^\d+\s+locations?$/i.test(String(l.location).trim()))) l.location = d.location;
+      l.posted = l.posted || d.posted;
+    }
   });
   postings = postings.filter((l) => isCanada(l.location));
 
@@ -644,7 +718,7 @@ async function scanEmployer(emp, cache, previous) {
   });
   const kind = ats.type === 'taleo-be' ? 'taleo' : ats.type;
   const ok = total || kind !== 'generic';
-  const cacheEntry = emp.careers_url ? null : { status: 'found', url, via: note, checked: new Date().toISOString() };
+  const cacheEntry = emp.careers_url ? null : { status: 'found', url, via: note, ...(site ? { site } : {}), checked: new Date().toISOString() };
   return { status: { status: ok ? 'ok' : 'check_page', board: kind, url, note: ok ? note : 'Page shows no jobs - add the direct job-list link', read: total, kept: jobs.length,
     seconds: Math.round((Date.now() - started) / 1000) }, jobs, cacheEntry };
 }
@@ -695,6 +769,7 @@ async function main() {
       const results = [...byName.values()].map((r) => ({ company: r.emp.company, status: r.status, jobs: r.jobs || [], carried: r.carried || null }));
       await writeFile(file, JSON.stringify({ part: PART[0], of: PART[1], results, cache: cacheChanges }));
       console.log(`\n${reason}: part ${PART[0]} of ${PART[1]} checked ${results.length} of ${employers.length} employers in ${Math.round((Date.now() - STARTED) / 60000)} min.`);
+      console.log(`Wikidata lookups used: ${wikiStats.used} of ${WIKI_MAX}${wikiStats.paused ? ` (paused: ${wikiStats.paused})` : ''}`);
       return;
     }
     // Compact output in the order of employers.csv: employers listed once, jobs reference them by index.
@@ -756,7 +831,13 @@ async function main() {
     if (Date.now() - STARTED > TIME_BUDGET_MS) r = carry(emp);
     else {
       try { r = await limit(scanEmployer(emp, cache, previous), EMPLOYER_LIMIT_MS); }
-      catch (e) { r = { status: { status: 'error', note: String(e.message || e).slice(0, 200) }, jobs: [] }; if (!emp.careers_url) dropCache(emp.company); }
+      catch (e) {
+        r = { status: { status: 'error', note: String(e.message || e).slice(0, 200) }, jobs: [] };
+        if (!emp.careers_url) { // look again next scan, but keep the website if we know it (no need to ask Wikidata again)
+          const knownSite = cache[emp.company]?.site;
+          if (knownSite) setCache(emp.company, { status: 'retry', site: knownSite, checked: new Date().toISOString() }); else dropCache(emp.company);
+        }
+      }
       if (r.cacheEntry) setCache(emp.company, r.cacheEntry);
     }
     byName.set(emp.company, { emp, ...r });
