@@ -22,6 +22,7 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 const MAX_DETAILS_PER_EMPLOYER = Number(process.env.TALENTPULSE_MAX_DETAILS || 250);
 const TIME_BUDGET_MS = Number(process.env.TALENTPULSE_BUDGET_MIN || 270) * 60000;   // stop starting new employers after this
 const HARD_STOP_MS = Number(process.env.TALENTPULSE_HARD_STOP_MIN || 305) * 60000;   // save whatever is done and finish, no matter what
+const DISCOVERY_LIMIT_MS = Number(process.env.TALENTPULSE_DISCOVERY_MIN || 4) * 60000;
 const EMPLOYER_LIMIT_MS = Number(process.env.TALENTPULSE_EMPLOYER_MIN || 8) * 60000; // one employer may take at most this long
 const STARTED = Date.now();
 // Wikimedia's User-Agent policy asks for a contact URL or email; the repository URL is the contact.
@@ -71,7 +72,7 @@ async function http(url, opts = {}) {
 }
 const getJSON = async (url, opts) => (await http(url, { ...opts, headers: { Accept: 'application/json', ...(opts?.headers || {}) } })).json();
 const postJSON = (url, body) => getJSON(url, { method: 'POST', body: JSON.stringify(body), headers: { 'Content-Type': 'application/json' } });
-async function getHTML(url) { const r = await http(url); return { html: await r.text(), finalUrl: r.url }; }
+async function getHTML(url, opts) { const r = await http(url, opts); return { html: await r.text(), finalUrl: r.url }; }
 
 async function pool(items, size, fn) {
   const out = new Array(items.length);
@@ -219,6 +220,15 @@ function findEmbeddedAts(html) {
 }
 
 // ---------------- Adapters: each returns [{id,title,url,location,posted,type?,description?, detail?:fn}] ----------
+// Find the Workday site's country filter (it may sit inside a "Locations" group).
+function workdayCountryFacet(facets) {
+  for (const f of facets || []) {
+    if (/country/i.test(f.facetParameter || '') && Array.isArray(f.values) && f.values.some((v) => v.descriptor && v.id)) return f;
+    const inner = workdayCountryFacet((f.values || []).filter((v) => v.facetParameter && Array.isArray(v.values)));
+    if (inner) return inner;
+  }
+  return null;
+}
 const ADAPTERS = {
   async greenhouse({ slug }) {
     const d = await getJSON(`https://boards-api.greenhouse.io/v1/boards/${slug}/jobs?content=true`);
@@ -253,27 +263,43 @@ const ADAPTERS = {
   async workday({ host, tenant, site }) {
     const api = `https://${host}/wday/cxs/${tenant}/${site}`;
     const seen = new Map();
-    const pageThrough = async (searchText, cap) => {
+    const pageThrough = async (searchText, cap, appliedFacets = {}, first = null) => {
       let total = Infinity;
       for (let offset = 0; offset < Math.min(total, cap); offset += 20) {
-        const d = await postJSON(`${api}/jobs`, { appliedFacets: {}, limit: 20, offset, searchText });
+        const d = offset === 0 && first ? first : await postJSON(`${api}/jobs`, { appliedFacets, limit: 20, offset, searchText });
         if (offset === 0) total = d.total || 0;
         if (!d.jobPostings?.length) break;
         for (const j of d.jobPostings) if (!seen.has(j.externalPath)) seen.set(j.externalPath, j);
       }
       return total;
     };
-    const total = await pageThrough('', 1000);
-    // Global employers list thousands of jobs worldwide: also search for Canadian places so those aren't missed.
-    if (total > 1000) {
-      for (const t of ['Canada', 'Toronto', 'Ontario', 'Montreal', 'Quebec', 'Vancouver', 'British Columbia', 'Calgary', 'Alberta', 'Ottawa', 'Mississauga', 'Remote']) {
-        try { await pageThrough(t, 400); } catch { /* keep what we have */ }
+    const first = await postJSON(`${api}/jobs`, { appliedFacets: {}, limit: 20, offset: 0, searchText: '' });
+    // Most Workday sites have a "Country" filter: read only the Canadian jobs, and skip sites that have none.
+    const countryFacet = workdayCountryFacet(first.facets);
+    const canada = countryFacet?.values.find((v) => /^(canada\b.*|can|ca)$/i.test(String(v.descriptor || '').trim()) && v.id);
+    // A country filter without Canada: "2 Locations"-type jobs are almost surely elsewhere, so leave those out.
+    const noCanada = !!countryFacet && !canada;
+    if (canada) await pageThrough('', 2000, { [countryFacet.facetParameter]: [canada.id] });
+    else {
+      const total = await pageThrough('', 1000, {}, first);
+      // Global employers list thousands of jobs worldwide: also search for Canadian places so those aren't missed.
+      if (total > 1000) {
+        for (const t of ['Canada', 'Toronto', 'Ontario', 'Montreal', 'Quebec', 'Vancouver', 'British Columbia', 'Calgary', 'Alberta', 'Ottawa', 'Mississauga', 'Remote']) {
+          try { await pageThrough(t, 400); } catch { /* keep what we have */ }
+        }
       }
     }
-    return [...seen.values()].map((j) => ({ id: `wd-${tenant}-${j.externalPath}`, title: j.title, url: `https://${host}/en-US/${site}${j.externalPath}`,
-      location: j.locationsText || '', posted: j.postedOn || '',
-      detail: async () => { const x = await getJSON(`${api}${j.externalPath}`); const i = x.jobPostingInfo || {};
-        return { description: htmlToText(i.jobDescription), type: i.timeType, location: i.location, posted: i.startDate || j.postedOn }; } }));
+    return [...seen.values()].filter((j) => !(noCanada && /^\d+\s+locations?$/i.test(String(j.locationsText || '').trim()))).map((j) => {
+      const many = String(j.locationsText || '').trim().match(/^(\d+)\s+locations?$/i);
+      return { id: `wd-${tenant}-${j.externalPath}`, title: j.title, url: `https://${host}/en-US/${site}${j.externalPath}`,
+        location: canada && many ? `Canada (${many[1]} locations)` : j.locationsText || '', inCanada: !!canada, posted: j.postedOn || '',
+        detail: async () => { const x = await getJSON(`${api}${j.externalPath}`); const i = x.jobPostingInfo || {};
+          // every location the job lists, Canadian ones first
+          const locs = [...new Set([i.location, ...(i.additionalLocations || [])].filter(Boolean).map(String))];
+          const ca = locs.filter((l) => provinceOf(l) || /canada/i.test(l));
+          const location = locs.length > 1 ? [...ca, ...locs.filter((l) => !ca.includes(l))].join(' / ') : locs[0] || '';
+          return { description: htmlToText(i.jobDescription), type: i.timeType, location: canada && locs.length && !ca.length ? '' : location, posted: i.startDate || j.postedOn }; } };
+    });
   },
   // Oracle Cloud HCM ("Candidate Experience") career sites
   async oracle({ origin, site, lang, url }) {
@@ -606,7 +632,7 @@ async function guessWebsite(emp, tld) {
     for (const host of [`www.${joined}.${tld}`, `www.${hyph}.${tld}`]) {
       if (tried.has(host)) continue;
       tried.add(host);
-      const page = await getHTML(`https://${host}/`).catch(() => null);
+      const page = await getHTML(`https://${host}/`, { timeout: 10000 }).catch(() => null);
       if (!page?.html) continue;
       const title = `${page.html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] || ''} ${page.html.match(/og:site_name["'][^>]*content=["']([^"']+)/i)?.[1] || ''}`;
       if (similarName(n, decodeEntities(title)) || normName(decodeEntities(title)).includes(normName(n))) return page.finalUrl;
@@ -654,6 +680,13 @@ async function discoverFromWebsite(emp, knownSite) {
 }
 
 // ---------------- One employer ----------------
+// Stop waiting for a slow step after `ms` (the step itself is abandoned).
+function limit(promise, ms) {
+  let timer;
+  const timeout = new Promise((_, rej) => { timer = setTimeout(() => rej(new Error('This careers site took too long - it will be tried again next scan')), ms); });
+  return Promise.race([promise.finally(() => clearTimeout(timer)), timeout]);
+}
+const vagueLocation = (s) => !String(s || '').trim() || /^(\d+\s+locations?|canada \(\d+ locations\))$/i.test(String(s).trim());
 async function scanEmployer(emp, cache, previous) {
   const started = Date.now();
   const known = cache[emp.company];
@@ -667,15 +700,17 @@ async function scanEmployer(emp, cache, previous) {
     else if (fresh && (known.status === 'not_found' || known.status === 'check_page')) {
       return { status: { status: known.status, url: known.url || '', note: known.note || 'Add a careers link' }, jobs: [], cacheEntry: known };
     } else {
-      let found = await discoverBySlug(emp);
-      if (!found) {
-        const d = await discoverFromWebsite(emp, known?.site);
-        if (d.status === 'unscanned') return { status: { status: 'unscanned', url: '', note: d.note }, jobs: [] };
-        if (!d.url || d.status) {
-          const entry = { status: d.status || 'not_found', url: d.url || '', site: d.site || '', note: d.note, checked: new Date().toISOString() };
-          return { status: { status: entry.status, url: entry.url, note: entry.note }, jobs: [], cacheEntry: entry };
-        }
-        found = d;
+      // Look for the employer's job board, but give up on very slow websites (remembered for a week).
+      let found;
+      try { found = await limit((async () => (await discoverBySlug(emp)) || (await discoverFromWebsite(emp, known?.site)))(), DISCOVERY_LIMIT_MS); }
+      catch (e) {
+        if (!/took too long/.test(String(e.message))) throw e;
+        found = { status: 'not_found', site: known?.site || '', note: 'Website too slow to search automatically - add a careers link' };
+      }
+      if (found.status === 'unscanned') return { status: { status: 'unscanned', url: '', note: found.note }, jobs: [] };
+      if (!found.url || found.status) {
+        const entry = { status: found.status || 'not_found', url: found.url || '', site: found.site || '', note: found.note, checked: new Date().toISOString() };
+        return { status: { status: entry.status, url: entry.url, note: entry.note }, jobs: [], cacheEntry: entry };
       }
       url = found.url; listings = found.listings; note = found.via; site = found.site || site;
     }
@@ -687,12 +722,14 @@ async function scanEmployer(emp, cache, previous) {
   const strict = ats.type === 'generic';
   let postings = listings.map((l) => ({ ...l, title: String(l.title || '').replace(/\s+/g, ' ').trim() }))
     .filter((l) => l.jobLike !== false && plausibleTitle(l.title, strict))
-    .filter((l) => isCanada(l.location));
+    .filter((l) => l.inCanada || isCanada(l.location));
   const total = listings.length;
 
   // Descriptions tell us years of experience and "new grad" wording. Senior titles are hidden anyway, so skip them.
+  // Jobs whose place is known, or listed as "N locations" (the job page names them), get their details first.
+  const worth = (l) => Number(!!regionOf(l.location) || vagueLocation(l.location));
   const needDetail = postings.filter((l) => !l.description && l.detail && !isSeniorTitle(l.title))
-    .sort((a, b) => Number(!!regionOf(b.location)) - Number(!!regionOf(a.location)))
+    .sort((a, b) => worth(b) - worth(a))
     .slice(0, MAX_DETAILS_PER_EMPLOYER);
   await pool(needDetail, 4, async (l) => {
     if (Date.now() - started > 240000) return; // enough time spent on this employer's details
@@ -700,11 +737,11 @@ async function scanEmployer(emp, cache, previous) {
     if (typeof d === 'string') l.description = d;
     else if (d) {
       l.description = d.description;
-      if (d.location && (!l.location || /^\d+\s+locations?$/i.test(String(l.location).trim()))) l.location = d.location;
+      if (d.location && vagueLocation(l.location)) l.location = d.location;
       l.posted = l.posted || d.posted;
     }
   });
-  postings = postings.filter((l) => isCanada(l.location));
+  postings = postings.filter((l) => l.inCanada || isCanada(l.location));
 
   const now = new Date();
   const jobs = postings.map((l) => {
@@ -753,11 +790,6 @@ async function main() {
     const p = prevEmp.get(emp.company); // keep the last scan's results for this employer
     return p ? { status: { status: p.e.s, board: p.e.b, url: p.e.u, note: p.e.note, read: p.e.r, kept: p.e.k }, carried: prevJobsByEmp.get(p.i) || [] }
       : { status: { status: 'unscanned', note: 'Not reached in this scan - it will be checked next time' }, jobs: [] };
-  };
-  const limit = (promise, ms) => {
-    let timer;
-    const timeout = new Promise((_, rej) => { timer = setTimeout(() => rej(new Error('This careers site took too long - it will be tried again next scan')), ms); });
-    return Promise.race([promise.finally(() => clearTimeout(timer)), timeout]);
   };
 
   let written = false;
