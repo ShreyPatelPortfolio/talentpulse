@@ -16,9 +16,9 @@ Everything is in this one folder, with no subfolders.
 4. **Open your website and click the green "Turn on the daily scan" button** at the top.
    - GitHub opens with the scan settings already filled in. Click **Commit changes**, then **Commit changes** again.
    - GitHub keeps scan settings in a hidden folder that drag-and-drop skips, which is why this one file is created by that button.
-   - The first scan starts by itself and takes about **1–2 hours**. The box at the top of your website shows its progress.
+   - The scan starts by itself. It splits the employer list into **10 parts that run at the same time** on GitHub's computers, then combines them. It usually takes **15–30 minutes**. The box at the top of your website shows its progress.
 
-After that, the scan runs every morning on its own.
+After that, the scan runs every morning on its own (and again whenever you upload a changed `employers.csv`).
 
 ## What the scan does
 

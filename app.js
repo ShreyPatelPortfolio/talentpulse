@@ -111,14 +111,26 @@ async function checkSetup() {
   const api = `https://api.github.com/repos/${GH.owner}/${GH.repo}`;
   const repoUrl = `https://github.com/${GH.owner}/${GH.repo}`;
   let branch = 'main', workflow = null, run = null;
+  // Read a repository file fresh through GitHub's API (the raw-file service can lag a few minutes after a change).
+  const ghFile = async (filePath) => {
+    try {
+      const r = await fetch(`${api}/contents/${filePath}?ref=${branch}&t=${Date.now()}`, { cache: 'no-store' });
+      if (r.ok) { const j = await r.json(); if (j.content) return new TextDecoder().decode(Uint8Array.from(atob(j.content.replace(/\s/g, '')), (c) => c.charCodeAt(0))); }
+    } catch { /* fall back below */ }
+    return loadText(filePath);
+  };
   try { const r = await fetch(api); if (r.ok) branch = (await r.json()).default_branch || 'main'; } catch { /* use main */ }
   try { const r = await fetch(`${api}/actions/workflows`); if (r.ok) workflow = ((await r.json()).workflows || []).find((w) => /talentpulse/i.test(w.path)) || false; } catch { /* unknown */ }
-  if (workflow) { try { const r = await fetch(`${api}/actions/runs?per_page=1`); if (r.ok) run = ((await r.json()).workflow_runs || [])[0] || null; } catch { /* unknown */ } }
+  let fast = true;
+  if (workflow) {
+    try { const r = await fetch(`${api}/actions/workflows/${workflow.id}/runs?per_page=1`); if (r.ok) run = ((await r.json()).workflow_runs || [])[0] || null; } catch { /* unknown */ }
+    try { fast = /matrix:/.test(await ghFile('.github/workflows/talentpulse.yml')); } catch { /* assume it's fine */ }
+  }
   const ago = (t) => { const m = Math.max(0, Math.round((Date.now() - Date.parse(t)) / 60000)); return m < 60 ? `${m} min` : `${Math.floor(m / 60)} h ${m % 60} min`; };
   box.hidden = false;
   if (!workflow) {
     let yml = '';
-    try { yml = await loadText('talentpulse-workflow.yml'); } catch { /* button still opens the page */ }
+    try { yml = await ghFile('talentpulse-workflow.yml'); } catch { /* button still opens the page */ }
     const newUrl = `${repoUrl}/new/${branch}?filename=${encodeURIComponent('.github/workflows/talentpulse.yml')}&value=${encodeURIComponent(yml)}`;
     box.innerHTML = `<div class="setup-icon">1</div><div class="setup-body"><h3>Last step: turn on the daily career-site scan</h3>
       <p>Click the button. GitHub opens with the scan settings already filled in. Just click the green <b>Commit changes</b> button, then <b>Commit changes</b> again in the box that pops up. The first scan starts by itself and takes about 1–2 hours.</p>
@@ -126,9 +138,25 @@ async function checkSetup() {
       <button class="btn ghost sm" id="copyYml">Copy the settings text</button><button class="btn ghost sm" id="recheck">I did it, check again</button></div>
       <p class="muted small">If GitHub shows an empty file instead: click “Copy the settings text”, then on GitHub choose Add file → Create new file, type <code>.github/workflows/talentpulse.yml</code> as the name, paste, and commit.</p></div>`;
     $('#copyYml').addEventListener('click', async (e) => { try { await navigator.clipboard.writeText(yml); e.target.textContent = 'Copied ✓'; } catch { e.target.textContent = 'Copy failed'; } });
+  } else if (!fast) { // the older one-machine scan settings: offer the 10-part version
+    let yml = '';
+    try { yml = await ghFile('talentpulse-workflow.yml'); } catch { /* checked below */ }
+    if (!/matrix:/.test(yml)) { try { const r = await fetch(`talentpulse-workflow.yml?t=${Date.now()}`, { cache: 'no-store' }); if (r.ok) yml = await r.text(); } catch { /* checked below */ } }
+    const ready = /matrix:/.test(yml);
+    const running = run && ['in_progress', 'queued', 'waiting', 'requested', 'pending'].includes(run.status);
+    box.innerHTML = `<div class="setup-icon">⚡</div><div class="setup-body"><h3>Switch to the fast scan (10 parts at the same time)</h3>
+      <p>${running ? `A slower scan is running now (started ${ago(run.run_started_at || run.created_at)} ago). Switching stops it and starts the fast one, which usually takes 15–30 minutes.` : 'The fast scan checks all employers in 10 parts at once and usually takes 15–30 minutes.'}</p>
+      <p><b>1.</b> Click <b>Copy the new settings</b>. <b>2.</b> Click <b>Open the scan settings on GitHub</b>. <b>3.</b> Click inside GitHub's editor, press <b>Ctrl+A</b>, then <b>Ctrl+V</b>, and click <b>Commit changes</b>, then <b>Commit changes</b> again.</p>
+      <div class="row"><button class="btn primary" id="copyYml">Copy the new settings</button>
+      <a class="btn" href="${repoUrl}/edit/${branch}/.github/workflows/talentpulse.yml" target="_blank" rel="noopener">Open the scan settings on GitHub ↗</a>
+      <button class="btn ghost sm" id="recheck">I did it, check again</button></div></div>`;
+    $('#copyYml').addEventListener('click', async (e) => {
+      if (!ready) { e.target.textContent = 'Not ready yet: upload the new files, wait a minute, refresh'; return; }
+      try { await navigator.clipboard.writeText(yml); e.target.textContent = 'Copied ✓'; } catch { e.target.textContent = 'Copy failed'; }
+    });
   } else if (run && ['in_progress', 'queued', 'waiting', 'requested', 'pending'].includes(run.status)) {
-    box.innerHTML = `<div class="setup-icon spin">↻</div><div class="setup-body"><h3>The first career-site scan is running</h3>
-      <p>Started ${ago(run.run_started_at || run.created_at)} ago. It checks all ${fmt(activeEmployers().length)} employers and usually takes 1–2 hours. You can upload your resume and choose titles now; the openings appear when it finishes.</p>
+    box.innerHTML = `<div class="setup-icon spin">↻</div><div class="setup-body"><h3>The career-site scan is running</h3>
+      <p>Started ${ago(run.run_started_at || run.created_at)} ago. It checks all ${fmt(activeEmployers().length)} employers in 10 parts at the same time, which usually takes 15–30 minutes. You can upload your resume and choose titles now; the openings appear when it finishes.</p>
       <div class="row"><a class="btn ghost sm" href="${esc(run.html_url)}" target="_blank" rel="noopener">Watch it run ↗</a><button class="btn ghost sm" id="recheck">Check again</button></div></div>`;
   } else if (run && run.status === 'completed' && run.conclusion !== 'success') {
     box.innerHTML = `<div class="setup-icon warn">!</div><div class="setup-body"><h3>The scan stopped with an error</h3>
@@ -306,6 +334,7 @@ function renderFilters() {
   $('#provPick').innerHTML = `<button data-p="" class="${S.provs.size ? '' : 'on'}">All of Canada</button>` +
     REGIONS.map((p) => `<button data-p="${p}" class="${S.provs.has(p) ? 'on' : ''}" title="${esc(REGION_LABEL[p])}">${p === '?' ? 'Not stated' : p}</button>`).join('');
   $('#excludeWords').value = S.exclude;
+  $('#noScanMsg').hidden = !!S.data.generatedAt;
   $('#dataAge').innerHTML = S.data.generatedAt ? `Uses the career-site scan from ${new Date(S.data.generatedAt).toLocaleString('en-CA', { dateStyle: 'medium', timeStyle: 'short' })}. It refreshes every morning.` : '';
 }
 $('#levelToggles').addEventListener('click', (e) => { const b = e.target.closest('[data-lv]'); if (!b) return; const l = b.dataset.lv; S.levels.has(l) ? S.levels.delete(l) : S.levels.add(l); saveFilters(); renderFilters(); });
@@ -317,6 +346,12 @@ $('#excludeWords').addEventListener('change', (e) => { S.exclude = e.target.valu
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 async function runSearch() {
   if (!S.selected.size) { alert('Pick at least one job title first.'); return; }
+  if (!S.data.generatedAt) { // nothing has been collected yet: point at the setup box instead of showing zeros
+    $('#noScanMsg').hidden = false;
+    const box = $('#setup');
+    if (!box.hidden) { box.scrollIntoView({ behavior: 'smooth', block: 'start' }); box.classList.remove('attention'); void box.offsetWidth; box.classList.add('attention'); }
+    return;
+  }
   const d = S.data;
   $$('.view').forEach((v) => { v.hidden = v.id !== 'view-searching'; });
   window.scrollTo({ top: 0 });
@@ -531,7 +566,7 @@ function renderEmployers() {
   const q = $('#eq').value.toLowerCase(), st = $('#eStatus').value, pv = $('#eProv').value;
   const list = rows.filter((r) => (!q || `${r.name} ${r.city} ${r.ind}`.toLowerCase().includes(q)) && (!st || r.st === st) && (!pv || r.prov === pv))
     .sort((a, b) => b.mine - a.mine || b.open - a.open || a.name.localeCompare(b.name));
-  $('#eCount').textContent = `${fmt(list.length)} of ${fmt(rows.length)}`;
+  $('#eCount').textContent = `${fmt(list.length)} of ${fmt(rows.length)}${S.data.generatedAt ? '' : ' · statuses appear after the first scan finishes'}`;
   $('#eBody').innerHTML = list.slice(0, S.empLimit).map((r) => `<tr>
     <td>${r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.name)}</a>` : esc(r.name)}${r.board ? `<div class="sub">${esc(r.board)} job board</div>` : ''}</td>
     <td>${esc([r.city, r.prov].filter(Boolean).join(', '))}</td><td>${esc(r.ind)}</td>
