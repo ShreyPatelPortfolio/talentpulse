@@ -15,7 +15,7 @@
 import { readFile, writeFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { parseCSV, isCanada, regionOf, provinceOf, yearsRequired, hasNewGradWording, isSeniorTitle } from './core.js';
+import { parseCSV, isCanada, isCanadianPlace, regionOf, provinceOf, yearsRequired, hasNewGradWording, isSeniorTitle } from './core.js';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36 TalentPulse/1.0';
@@ -220,14 +220,24 @@ function findEmbeddedAts(html) {
 }
 
 // ---------------- Adapters: each returns [{id,title,url,location,posted,type?,description?, detail?:fn}] ----------
-// Find the Workday site's country filter (it may sit inside a "Locations" group).
-function workdayCountryFacet(facets) {
+// Workday sites offer place filters: a country filter (named "locationCountry", or e.g. "locationHierarchy1" listing
+// countries) and/or a city filter ("locations"). They may sit inside a "Locations" group.
+const COUNTRY_NAME = /^(united states( of america)?|usa|us|canada|can|ca|india|united kingdom|uk|great britain|germany|france|mexico|brazil|china|japan|australia|ireland|poland|philippines|singapore|netherlands|spain|italy|costa rica|israel|switzerland|sweden|argentina|colombia|chile|south africa|(republic of )?korea|south korea|taiwan|hong kong|malaysia|romania|czech( republic|ia)?|hungary|portugal|belgium|austria|denmark|norway|finland|new zealand|united arab emirates|saudi arabia|egypt|turkey|t[uü]rkiye|vietnam|viet nam|indonesia|thailand|puerto rico|guatemala|peru|ukraine|greece|luxembourg|bulgaria|serbia|croatia|slovakia|lithuania|latvia|estonia|nigeria|kenya|morocco|pakistan|bangladesh|sri lanka|qatar|kuwait|bahrain|oman)$/i;
+const isCanadaPlace = (d) => /^(canada\b.*|can|ca)$/i.test(String(d || '').trim());
+function workdayFacetGroups(facets, out = []) {
   for (const f of facets || []) {
-    if (/country/i.test(f.facetParameter || '') && Array.isArray(f.values) && f.values.some((v) => v.descriptor && v.id)) return f;
-    const inner = workdayCountryFacet((f.values || []).filter((v) => v.facetParameter && Array.isArray(v.values)));
-    if (inner) return inner;
+    const inner = (f.values || []).filter((v) => v.facetParameter && Array.isArray(v.values));
+    if (inner.length) workdayFacetGroups(inner, out);
+    if (f.facetParameter && (f.values || []).some((v) => v.id && v.descriptor && !Array.isArray(v.values))) out.push(f);
   }
-  return null;
+  return out;
+}
+function workdayPlaceFacets(facets) {
+  const groups = workdayFacetGroups(facets);
+  const listsCountries = (f) => { const v = f.values.filter((x) => x.id && x.descriptor); const c = v.filter((x) => COUNTRY_NAME.test(String(x.descriptor).trim())).length; return c >= 2 && c >= v.length / 2; };
+  const country = groups.find((f) => /country/i.test(f.facetParameter)) || groups.find(listsCountries) || null;
+  const cities = groups.find((f) => f !== country && /location/i.test(f.facetParameter) && !/hierarchy|group|region|country|type/i.test(f.facetParameter)) || null;
+  return { country, cities };
 }
 const ADAPTERS = {
   async greenhouse({ slug }) {
@@ -274,13 +284,18 @@ const ADAPTERS = {
       return total;
     };
     const first = await postJSON(`${api}/jobs`, { appliedFacets: {}, limit: 20, offset: 0, searchText: '' });
-    // Most Workday sites have a "Country" filter: read only the Canadian jobs, and skip sites that have none.
-    const countryFacet = workdayCountryFacet(first.facets);
-    const canada = countryFacet?.values.find((v) => /^(canada\b.*|can|ca)$/i.test(String(v.descriptor || '').trim()) && v.id);
-    // A country filter without Canada: "2 Locations"-type jobs are almost surely elsewhere, so leave those out.
-    const noCanada = !!countryFacet && !canada;
-    if (canada) await pageThrough('', 2000, { [countryFacet.facetParameter]: [canada.id] });
+    // Use the site's own place filters to read only the Canadian jobs.
+    const { country, cities } = workdayPlaceFacets(first.facets);
+    const canada = country?.values.find((v) => v.id && isCanadaPlace(v.descriptor));
+    const caCities = !canada && cities ? cities.values.filter((v) => v.id && isCanadianPlace(v.descriptor)) : [];
+    const ca = new Set(); // jobs the site itself places in Canada
+    const pageCanada = async (facets) => { const before = new Set(seen.keys()); await pageThrough('', 4000, facets); for (const k of seen.keys()) if (!before.has(k)) ca.add(k); };
+    if (canada) await pageCanada({ [country.facetParameter]: [canada.id] });
     else {
+      if (caCities.length) { // only a city filter: ask for the Canadian cities
+        try { await pageCanada({ [cities.facetParameter]: caCities.map((v) => v.id) }); } catch { /* fall back to the full list below */ }
+        for (const k of seen.keys()) ca.add(k);
+      }
       const total = await pageThrough('', 1000, {}, first);
       // Global employers list thousands of jobs worldwide: also search for Canadian places so those aren't missed.
       if (total > 1000) {
@@ -289,16 +304,20 @@ const ADAPTERS = {
         }
       }
     }
-    return [...seen.values()].filter((j) => !(noCanada && /^\d+\s+locations?$/i.test(String(j.locationsText || '').trim()))).map((j) => {
+    // When the site has place filters, a "2 Locations" job it didn't place in Canada is almost surely elsewhere.
+    const knowsPlaces = !!(country || cities);
+    return [...seen.entries()].filter(([k, j]) => ca.has(k) || !(knowsPlaces && /^\d+\s+locations?$/i.test(String(j.locationsText || '').trim()))).map(([k, j]) => {
       const many = String(j.locationsText || '').trim().match(/^(\d+)\s+locations?$/i);
+      const inCa = ca.has(k);
       return { id: `wd-${tenant}-${j.externalPath}`, title: j.title, url: `https://${host}/en-US/${site}${j.externalPath}`,
-        location: canada && many ? `Canada (${many[1]} locations)` : j.locationsText || '', inCanada: !!canada, posted: j.postedOn || '',
+        location: inCa && many ? `Canada (${many[1]} locations)` : j.locationsText || '', inCanada: inCa, posted: j.postedOn || '',
         detail: async () => { const x = await getJSON(`${api}${j.externalPath}`); const i = x.jobPostingInfo || {};
           // every location the job lists, Canadian ones first
           const locs = [...new Set([i.location, ...(i.additionalLocations || [])].filter(Boolean).map(String))];
-          const ca = locs.filter((l) => provinceOf(l) || /canada/i.test(l));
-          const location = locs.length > 1 ? [...ca, ...locs.filter((l) => !ca.includes(l))].join(' / ') : locs[0] || '';
-          return { description: htmlToText(i.jobDescription), type: i.timeType, location: canada && locs.length && !ca.length ? '' : location, posted: i.startDate || j.postedOn }; } };
+          const caLocs = locs.filter((l) => isCanadianPlace(l));
+          const ordered = [...caLocs, ...locs.filter((l) => !caLocs.includes(l))];
+          const location = ordered.length > 3 ? `${ordered.slice(0, 3).join(' / ')} +${ordered.length - 3} more` : ordered.join(' / ');
+          return { description: htmlToText(i.jobDescription), type: i.timeType, location: inCa && locs.length && !caLocs.length ? '' : location, posted: i.startDate || j.postedOn }; } };
     });
   },
   // Oracle Cloud HCM ("Candidate Experience") career sites
