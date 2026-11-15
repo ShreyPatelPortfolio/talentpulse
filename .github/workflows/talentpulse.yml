@@ -5,6 +5,7 @@ on:
   schedule:
     - cron: "17 10 * * *"
   push:
+    branches: [main]
     paths:
       - "employers.csv"
       - ".github/workflows/talentpulse.yml"
@@ -14,14 +15,25 @@ permissions:
 
 concurrency:
   group: talentpulse
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   scan:
+    name: Scan part ${{ matrix.part }} of 10
     runs-on: ubuntu-latest
-    timeout-minutes: 340
+    timeout-minutes: 110
+    strategy:
+      fail-fast: false
+      matrix:
+        part: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    env:
+      TALENTPULSE_BUDGET_MIN: 80
+      TALENTPULSE_HARD_STOP_MIN: 95
     steps:
       - uses: actions/checkout@v4
+
+      - name: Check that the new scan.js is uploaded
+        run: grep -q -- "--part" scan.js || { echo "::error::Upload the new scan.js first, then run this scan again."; exit 1; }
 
       - uses: actions/setup-node@v4
         with:
@@ -33,8 +45,38 @@ jobs:
           npx playwright install --with-deps chromium
         continue-on-error: true
 
-      - name: Scan every employer's career site
-        run: node scan.js
+      - name: Scan this part of the employer list
+        run: node scan.js --part ${{ matrix.part }}/10
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: part-${{ matrix.part }}
+          path: part-${{ matrix.part }}.json
+          if-no-files-found: ignore
+          retention-days: 2
+
+  save:
+    name: Combine the 10 parts and save
+    needs: scan
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: part-*
+          merge-multiple: true
+        continue-on-error: true
+
+      - name: Combine the parts into jobs.json
+        run: node scan.js --merge
 
       - name: Save the results
         run: |

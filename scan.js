@@ -8,9 +8,11 @@
 // The website then matches YOUR job titles against these openings.
 //
 //   node scan.js                 # everything
+//   node scan.js --part 3/10     # only the 3rd of 10 parts (GitHub runs the 10 parts at the same time)
+//   node scan.js --merge         # combine part-1.json ... part-10.json into jobs.json
 //   node scan.js --only "Brock"  # one employer (name contains text)
 
-import { readFile, writeFile } from 'node:fs/promises';
+import { readFile, writeFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseCSV, isCanada, regionOf, provinceOf, yearsRequired, hasNewGradWording, isSeniorTitle } from './core.js';
@@ -18,7 +20,9 @@ import { parseCSV, isCanada, regionOf, provinceOf, yearsRequired, hasNewGradWord
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36 TalentPulse/1.0';
 const MAX_DETAILS_PER_EMPLOYER = Number(process.env.TALENTPULSE_MAX_DETAILS || 250);
-const TIME_BUDGET_MS = Number(process.env.TALENTPULSE_BUDGET_MIN || 285) * 60000; // stop starting new employers after this
+const TIME_BUDGET_MS = Number(process.env.TALENTPULSE_BUDGET_MIN || 270) * 60000;   // stop starting new employers after this
+const HARD_STOP_MS = Number(process.env.TALENTPULSE_HARD_STOP_MIN || 305) * 60000;   // save whatever is done and finish, no matter what
+const EMPLOYER_LIMIT_MS = Number(process.env.TALENTPULSE_EMPLOYER_MIN || 8) * 60000; // one employer may take at most this long
 const STARTED = Date.now();
 const WIKI_UA = 'TalentPulse/1.0 (personal job-search tool run on GitHub Actions)';
 const MAX_LISTINGS = 2500;
@@ -27,6 +31,11 @@ const RETRY_NOT_FOUND_DAYS = 7;
 const args = process.argv.slice(2);
 const onlyIdx = args.indexOf('--only');
 const ONLY = onlyIdx >= 0 ? String(args[onlyIdx + 1] || '').toLowerCase() : '';
+const partIdx = args.indexOf('--part');
+const PART = partIdx >= 0 ? (String(args[partIdx + 1] || '').match(/^(\d+)\/(\d+)$/) || []).slice(1).map(Number) : null; // [n, of]
+const MERGE = args.includes('--merge');
+if (partIdx >= 0 && !(PART?.length === 2 && PART[0] >= 1 && PART[0] <= PART[1])) { console.error('Use --part N/M, for example --part 3/10'); process.exit(1); }
+const WIKI_SLOTS = Number(process.env.TALENTPULSE_WIKI_SLOTS || (PART ? 2 : 4)); // 10 parts at once share Wikidata politely
 
 // ---------------- HTTP helpers ----------------
 async function http(url, opts = {}) {
@@ -476,7 +485,7 @@ const CA_DESC = /canad|ontario|qu[eé]bec|british columbia|alberta|manitoba|sask
 // Wikidata asks callers to go easy: at most 4 lookups at a time, and wait/retry when it says "busy".
 let wikiBusy = 0;
 async function wikiGet(url) {
-  while (wikiBusy >= 4) await new Promise((r) => setTimeout(r, 100));
+  while (wikiBusy >= WIKI_SLOTS) await new Promise((r) => setTimeout(r, 100));
   wikiBusy++;
   try {
     for (let attempt = 0; ; attempt++) {
@@ -513,7 +522,7 @@ const OPENINGS_TEXT = /\b(search|view|see|browse|explore|find)\b.{0,20}\b(jobs|o
 async function isRss(url) {
   try { const t = await (await http(url, { timeout: 15000 })).text(); return /<rss[\s>]/i.test(t) && /<item>/i.test(t); } catch { return false; }
 }
-async function inspectCareersPage(url, depth) {
+async function inspectCareersPage(url, depth, budget = { renders: 1 }) {
   let page = await getHTML(url).catch(() => null);
   if (!page || !page.html) return null;
   if (detectAts(page.finalUrl).type !== 'generic') return { board: page.finalUrl };
@@ -524,7 +533,8 @@ async function inspectCareersPage(url, depth) {
     if (await isRss(rss)) return { board: rss };
   }
   let anchors = extractAnchors(page.html, page.finalUrl);
-  if (anchors.length < 8 || !anchors.some((a) => ROLE_WORD.test(a.text))) {
+  if ((anchors.length < 8 || !anchors.some((a) => ROLE_WORD.test(a.text))) && budget.renders > 0) {
+    budget.renders--;
     const r = await renderPage(page.finalUrl);
     if (r?.html) {
       if (detectAts(r.finalUrl).type !== 'generic') return { board: r.finalUrl };
@@ -537,7 +547,7 @@ async function inspectCareersPage(url, depth) {
     const next = [...new Set(anchors.filter((a) => OPENINGS_TEXT.test(a.text)).map((a) => a.href.split('#')[0]))].filter((h) => h !== page.finalUrl).slice(0, 3);
     for (const n of next) {
       if (detectAts(n).type !== 'generic') return { board: n };
-      const r = await inspectCareersPage(n, 1);
+      const r = await inspectCareersPage(n, 1, budget);
       if (r?.board || r?.listing) return r;
     }
   }
@@ -557,14 +567,15 @@ async function discoverFromWebsite(emp) {
     const anchors = extractAnchors(home.html, home.finalUrl)
       .filter((a) => CAREER_TEXT.test(a.text.trim()) || CAREER_HREF.test(a.href))
       .sort((a, b) => Number(CAREER_TEXT.test(b.text.trim())) - Number(CAREER_TEXT.test(a.text.trim())));
-    candidates.push(...anchors.map((a) => a.href.split('#')[0]));
+    candidates.push(...[...new Set(anchors.map((a) => a.href.split('#')[0]))].slice(0, 3));
   }
   const origin = new URL(home?.finalUrl || site).origin;
   const rootHost = new URL(origin).hostname.replace(/^www\./, '');
-  candidates.push(`${origin}/careers`, `${origin}/en/careers`, `${origin}/jobs`, `https://careers.${rootHost}`, `https://jobs.${rootHost}`);
+  if (!candidates.length) candidates.push(`${origin}/careers`, `${origin}/en/careers`, `${origin}/jobs`, `https://careers.${rootHost}`, `https://jobs.${rootHost}`);
   let careersPage = null;
-  for (const c of [...new Set(candidates)].slice(0, 8)) {
-    const r = await inspectCareersPage(c, 0).catch(() => null);
+  const budget = { renders: 1 };
+  for (const c of [...new Set(candidates)].slice(0, 5)) {
+    const r = await inspectCareersPage(c, 0, budget).catch(() => null);
     if (!r) continue;
     if (r.board) return { url: r.board, site, via: 'job board found from the website' };
     if (r.listing) return { url: r.listing, site, via: 'careers page found from the website' };
@@ -614,6 +625,7 @@ async function scanEmployer(emp, cache, previous) {
     .sort((a, b) => Number(!!regionOf(b.location)) - Number(!!regionOf(a.location)))
     .slice(0, MAX_DETAILS_PER_EMPLOYER);
   await pool(needDetail, 4, async (l) => {
+    if (Date.now() - started > 240000) return; // enough time spent on this employer's details
     const d = await l.detail();
     if (typeof d === 'string') l.description = d;
     else if (d) { l.description = d.description; l.location ||= d.location; l.posted = l.posted || d.posted; }
@@ -653,55 +665,108 @@ async function main() {
 
   // Employers with a link first, then ones whose board was found before, then the ones still to look up.
   const rank = (e) => (e.careers_url ? 0 : cache[e.company]?.status === 'found' ? 1 : 2);
-  const employers = all.map((e, i) => ({ e, i })).sort((a, b) => rank(a.e) - rank(b.e) || a.i - b.i).map((x) => x.e);
-  console.log(`TalentPulse: checking ${employers.length} employers (${WORKERS} at a time)`);
+  const sorted = all.map((e, i) => ({ e, i })).sort((a, b) => rank(a.e) - rank(b.e) || a.i - b.i).map((x) => x.e);
+  // In part mode, every Nth employer goes to this part, so each part gets a fair mix of quick and slow employers.
+  const employers = PART ? sorted.filter((_, i) => i % PART[1] === PART[0] - 1) : MERGE ? [] : sorted;
+  const cacheChanges = {};
+  const setCache = (name, entry) => { cache[name] = entry; cacheChanges[name] = entry; };
+  const dropCache = (name) => { delete cache[name]; cacheChanges[name] = null; };
+  console.log(MERGE ? 'TalentPulse: combining the parts' : `TalentPulse: checking ${employers.length} employers${PART ? ` (part ${PART[0]} of ${PART[1]})` : ''}, ${WORKERS} at a time`);
 
   let done = 0;
   const byName = new Map();
+  const carry = (emp) => {
+    const p = prevEmp.get(emp.company); // keep the last scan's results for this employer
+    return p ? { status: { status: p.e.s, board: p.e.b, url: p.e.u, note: p.e.note, read: p.e.r, kept: p.e.k }, carried: prevJobsByEmp.get(p.i) || [] }
+      : { status: { status: 'unscanned', note: 'Not reached in this scan - it will be checked next time' }, jobs: [] };
+  };
+  const limit = (promise, ms) => {
+    let timer;
+    const timeout = new Promise((_, rej) => { timer = setTimeout(() => rej(new Error('This careers site took too long - it will be tried again next scan')), ms); });
+    return Promise.race([promise.finally(() => clearTimeout(timer)), timeout]);
+  };
+
+  let written = false;
+  async function save(reason) {
+    if (written) return;
+    written = true;
+    if (PART) { // a part only writes its own results; the combine step builds jobs.json
+      const file = path.join(ROOT, `part-${PART[0]}.json`);
+      const results = [...byName.values()].map((r) => ({ company: r.emp.company, status: r.status, jobs: r.jobs || [], carried: r.carried || null }));
+      await writeFile(file, JSON.stringify({ part: PART[0], of: PART[1], results, cache: cacheChanges }));
+      console.log(`\n${reason}: part ${PART[0]} of ${PART[1]} checked ${results.length} of ${employers.length} employers in ${Math.round((Date.now() - STARTED) / 60000)} min.`);
+      return;
+    }
+    // Compact output in the order of employers.csv: employers listed once, jobs reference them by index.
+    const results = all.map((e) => byName.get(e.company) || { emp: e, ...carry(e) });
+    const empOut = results.map(({ emp, status }) => ({ n: emp.company, p: emp.province, c: emp.city, i: emp.industry,
+      s: status.status, b: status.board || '', u: status.url || emp.careers_url || '', note: status.note || '', r: status.read || 0, k: status.kept || 0 }));
+    const empIndex = new Map(empOut.map((e, i) => [e.n, i]));
+    const seen = new Set();
+    const jobs = [];
+    if (ONLY) { // keep everyone else's results from the last full scan
+      for (const [name, { e, i }] of prevEmp) {
+        if (empIndex.has(name)) continue;
+        empIndex.set(name, empOut.length); empOut.push(e);
+        for (const j of prevJobsByEmp.get(i) || []) jobs.push([empIndex.get(name), ...j.slice(1)]);
+      }
+    }
+    for (const { emp, jobs: list, carried } of results) {
+      const ei = empIndex.get(emp.company);
+      for (const j of carried || []) { if (!seen.has(j[4])) { seen.add(j[4]); jobs.push([ei, ...j.slice(1)]); } }
+      for (const j of list || []) {
+        if (seen.has(j.id)) continue; seen.add(j.id);
+        // [employer, title, location, region, url, posted, years, newGradWording, firstSeen]
+        jobs.push([ei, j.title, j.location, j.region, j.url, j.posted, j.years, j.ng ? 1 : 0, j.firstSeen]);
+      }
+    }
+    const counts = empOut.reduce((a, e) => { a[e.s] = (a[e.s] || 0) + 1; return a; }, {});
+    const minutes = Math.round((Date.now() - STARTED) / 60000);
+    await writeFile(outFile, JSON.stringify({ generatedAt: new Date().toISOString(), minutes, counts, employers: empOut, jobs }));
+    await writeFile(cacheFile, JSON.stringify(cache, null, 1));
+    console.log(`\n${reason} after ${minutes} min. ${jobs.length} openings in Canada from ${empOut.filter((e) => e.k).length} employers.`, counts);
+  }
+  // Safety net: GitHub stops a scan after a few hours, so save everything found so far before that happens.
+  const watchdog = setTimeout(async () => {
+    console.log('Time limit reached - saving what has been found so far.');
+    await save('Saved early');
+    process.exit(0);
+  }, Math.max(0, HARD_STOP_MS - (Date.now() - STARTED)));
+
+  if (MERGE) { // combine the parts' results; employers a part didn't finish keep their previous results
+    const files = (await readdir(ROOT)).filter((f) => /^part-\d+\.json$/.test(f)).sort();
+    const byCompany = new Map(all.map((e) => [e.company, e]));
+    for (const f of files) {
+      let part;
+      try { part = JSON.parse(await readFile(path.join(ROOT, f), 'utf8')); } catch { console.log(`  ${f}: could not be read, skipped`); continue; }
+      for (const r of part.results || []) {
+        const emp = byCompany.get(r.company);
+        if (emp) byName.set(r.company, { emp, status: r.status, jobs: r.jobs || [], carried: r.carried || undefined });
+      }
+      for (const [name, entry] of Object.entries(part.cache || {})) { if (entry === null) delete cache[name]; else cache[name] = entry; }
+      console.log(`  ${f}: ${(part.results || []).length} employers`);
+    }
+    clearTimeout(watchdog);
+    await save(`Combined ${files.length} parts`);
+    process.exit(0);
+  }
+
   await pool(employers, WORKERS, async (emp) => {
     let r;
-    if (Date.now() - STARTED > TIME_BUDGET_MS) {
-      const p = prevEmp.get(emp.company); // out of time: keep the last scan's results for this employer
-      r = p ? { status: { status: p.e.s, board: p.e.b, url: p.e.u, note: p.e.note, read: p.e.r, kept: p.e.k }, carried: prevJobsByEmp.get(p.i) || [] }
-        : { status: { status: 'unscanned', note: 'Not reached in this scan - it will be checked next time' }, jobs: [] };
-    } else {
-      try { r = await scanEmployer(emp, cache, previous); }
-      catch (e) { r = { status: { status: 'error', note: String(e.message || e).slice(0, 200) }, jobs: [] }; if (!emp.careers_url) delete cache[emp.company]; }
-      if (r.cacheEntry) cache[emp.company] = r.cacheEntry;
+    if (Date.now() - STARTED > TIME_BUDGET_MS) r = carry(emp);
+    else {
+      try { r = await limit(scanEmployer(emp, cache, previous), EMPLOYER_LIMIT_MS); }
+      catch (e) { r = { status: { status: 'error', note: String(e.message || e).slice(0, 200) }, jobs: [] }; if (!emp.careers_url) dropCache(emp.company); }
+      if (r.cacheEntry) setCache(emp.company, r.cacheEntry);
     }
     byName.set(emp.company, { emp, ...r });
     done++;
     if (done % 50 === 0) console.log(`  ${done}/${employers.length} checked (${Math.round((Date.now() - STARTED) / 60000)} min)`);
   });
-
-  // Compact output in the order of employers.csv: employers listed once, jobs reference them by index.
-  const results = all.map((e) => byName.get(e.company)).filter(Boolean);
-  const empOut = results.map(({ emp, status }) => ({ n: emp.company, p: emp.province, c: emp.city, i: emp.industry,
-    s: status.status, b: status.board || '', u: status.url || emp.careers_url || '', note: status.note || '', r: status.read || 0, k: status.kept || 0 }));
-  const empIndex = new Map(empOut.map((e, i) => [e.n, i]));
-  const seen = new Set();
-  const jobs = [];
-  if (ONLY) { // keep everyone else's results from the last full scan
-    for (const [name, { e, i }] of prevEmp) {
-      if (empIndex.has(name)) continue;
-      empIndex.set(name, empOut.length); empOut.push(e);
-      for (const j of prevJobsByEmp.get(i) || []) jobs.push([empIndex.get(name), ...j.slice(1)]);
-    }
-  }
-  for (const { emp, jobs: list, carried } of results) {
-    const ei = empIndex.get(emp.company);
-    for (const j of carried || []) { if (!seen.has(j[4])) { seen.add(j[4]); jobs.push([ei, ...j.slice(1)]); } }
-    for (const j of list || []) {
-      if (seen.has(j.id)) continue; seen.add(j.id);
-      // [employer, title, location, region, url, posted, years, newGradWording, firstSeen]
-      jobs.push([ei, j.title, j.location, j.region, j.url, j.posted, j.years, j.ng ? 1 : 0, j.firstSeen]);
-    }
-  }
-  const counts = empOut.reduce((a, e) => { a[e.s] = (a[e.s] || 0) + 1; return a; }, {});
-  await writeFile(outFile, JSON.stringify({ generatedAt: new Date().toISOString(), minutes: Math.round((Date.now() - STARTED) / 60000), counts, employers: empOut, jobs }));
-  await writeFile(cacheFile, JSON.stringify(cache, null, 1));
-  console.log(`\nDone in ${Math.round((Date.now() - STARTED) / 60000)} min. ${jobs.length} openings in Canada from ${empOut.filter((e) => e.k).length} employers.`, counts);
+  clearTimeout(watchdog);
+  await save('Done');
   if (browserPromise) { const b = await browserPromise; await b?.close(); }
+  process.exit(0);
 }
 
 if (process.env.TALENTPULSE_RUN || (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1]))) {
